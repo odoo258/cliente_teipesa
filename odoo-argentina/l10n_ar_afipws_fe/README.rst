@@ -1,2 +1,0 @@
-Factura Electrónica Argentina
-=============================
