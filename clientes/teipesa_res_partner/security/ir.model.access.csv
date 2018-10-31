@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_teipesa_res_partner_teipesa_res_partner,teipesa_res_partner.teipesa_res_partner,model_teipesa_res_partner_teipesa_res_partner,,1,0,0,0
