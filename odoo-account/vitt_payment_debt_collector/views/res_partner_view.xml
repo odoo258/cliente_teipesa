@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Partner -->
+        <record id="vitt_view_res_partner_tree" model="ir.ui.view">
+            <field name="name">res.partner.tree.vitt</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="debt_collector"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

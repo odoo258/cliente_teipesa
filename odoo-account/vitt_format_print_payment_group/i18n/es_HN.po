@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_format_print_payment_group
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-30 20:50+0000\n"
+"PO-Revision-Date: 2017-10-30 14:52-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_HN\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: vitt_format_print_payment_group
+#: model:format.print.child_models,name:vitt_format_print_payment_group.child_account_payment_group_move_line
+msgid "Account - Move Lines"
+msgstr "Contabilidad - Líneas de Asiento"
+
+#. module: vitt_format_print_payment_group
+#: model:format.print.child_models,name:vitt_format_print_payment_group.child_account_payment_payment_group
+msgid "Account - Payment Lines"
+msgstr "Contabilidad - Líneas de Pago"
+
+#. module: vitt_format_print_payment_group
+#: model:format.print.child_models,name:vitt_format_print_payment_group.child_account_payment_payment2
+#: model:format.print.main_models,name:vitt_format_print_payment_group.main_account_payment_group
+msgid "Account Payment Group"
+msgstr "Contabilidad Grupo de Pagos"
+
+#. module: vitt_format_print_payment_group
+#: model:ir.ui.view,arch_db:vitt_format_print_payment_group.view_account_payment_form_inherit
+msgid "Print Payment"
+msgstr "Imprimir Pago"

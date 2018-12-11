@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_config_fiscal_seq_form" model="ir.ui.view">
+        <field name="name">pos.config.fiscal.sec.form.view</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_config_form"/>        
+        <field name="arch" type="xml">
+            <field name="active" position="before">
+                <field name="sequence_fiscal_id"/>
+                <field name="authorization_code_id" />
+            </field>            
+        </field>
+    </record>
+
+    <record id="vitt_fiscal_seq_pos_view_pos_pos_form" model="ir.ui.view">
+        <field name="name">pos.config.fiscal.sec.form.view</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>        
+        <field name="arch" type="xml">
+            <page name="extra" position="before">
+                <page string="Fiscal Info" name="fiscal_info">
+                    <group>
+                        <field name="tax_authorization_code" readonly="1"/>
+                        <field name="authorization_code_id" readonly="1"/>
+                        <field name="code_type" readonly="1"/>
+                        <field name="expiration_date" readonly="1"/>
+                        <field name="_from" readonly="1"/>
+                        <field name="_to" readonly="1"/>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+    
+</odoo>    

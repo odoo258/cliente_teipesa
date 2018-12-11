@@ -1,0 +1,1 @@
+import pyfiscalprinter_smh250f_panama

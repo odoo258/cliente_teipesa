@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* vitt_base_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-25 21:36+0000\n"
+"PO-Revision-Date: 2017-01-25 21:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: es\n"
+
+#. module: vitt_base_vat
+#: model:ir.model,name:vitt_base_vat.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_base_vat
+#: code:addons/vitt_base_vat/models/account_invoice.py:137
+#, python-format
+msgid "The VAT number [%s] for partner [%s] does not seem to be valid. \n"
+"Note: the expected format is %s"
+msgstr "El ID Tributario [%s] para la empresa [%s] no parece ser válido.\n"
+"Nota: el formato esperado es %s"
+
+#. module: vitt_base_vat
+#: code:addons/vitt_base_vat/models/account_invoice.py:136
+#, python-format
+msgid "The VAT number [%s] for partner [%s] either failed the VIES VAT validation check or did not respect the expected format %s."
+msgstr "El ID Tributario [%s] para la empresa [%s] o bien falla en la comprobación de validación o no respeta el formato esperado %s."
+
+#. module: vitt_base_vat
+#: model:ir.model.fields,field_description:vitt_base_vat.field_account_invoice_vat
+msgid "TIN"
+msgstr "ID Tributario"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="assets" inherit_id="web.assets_backend" name="Pos Backend Receipt Assests">
+          <xpath expr="." position="inside">
+              <script type="text/javascript" src="/pos_backend_receipt/static/src/js/pos_backend_receipt.js"></script>
+          </xpath>
+        </template>
+        <template id="assets1" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                 <script type="text/javascript" src="/pos_backend_receipt/static/src/js/payment_custom.js"></script>
+            </xpath>
+        </template>
+        
+    </data>
+</openerp>

@@ -1,0 +1,205 @@
+node {
+    stage('Build'){
+    parallel (
+   'Build PostgreSQL Instance': {
+      INSTANCE_NAME="${env.JOB_NAME}_${env.BUILD_NUMBER}"
+      sh "createdb ${INSTANCE_NAME}"
+      echo 'PostgreSQL Ready'
+   },
+   'Python External Dependency': {
+      /* sh '''
+       sudo apt-get -y install python-virtualenv && sleep 5
+       sudo apt-get -y install libxml2-dev libxslt1-dev python-dev && sleep 5
+       sudo apt-get -y install python-httplib2 python-m2crypto && sleep 5
+       '''*/
+       
+   },
+   'Buid Odoo Latest':{
+       dir('odoo') {
+       sh "wget https://nightly.odoo.com/10.0/nightly/src/old/odoo_10.0.20161101.tar.gz -O odoo_10.0.latest.tar.gz"
+       sh "tar -xf odoo_10.0.latest.tar.gz"
+       sh "mv odoo*/ ${INSTANCE_NAME}"
+       dir("${INSTANCE_NAME}") {
+    
+    
+/*    writeFile file: 'createdb.py', text: '''import erppeek
+ 
+DATABASE = \'jenkins\'
+SERVER = \'http://localhost:8069\'
+ADMIN_PASSWORD = \'admin\'
+ 
+client = erppeek.Client(server=SERVER)
+ 
+if not DATABASE in client.db.list():
+    print("The database does not exist yet, creating one!")
+    client.create_database(ADMIN_PASSWORD, DATABASE)
+else:
+    print("The database " + DATABASE + " already exists.")''' */
+    
+       // virtualenv -p python2 env && . env/bin/activate
+       sh "sudo rm -rf /usr/local/lib/python2.7/dist-packages/pyafipws/cache/*"
+       sh "sudo pip install -r requirements.txt && sudo pip install pysimplesoap==1.08.9 --upgrade && sudo pip install --upgrade git+https://bitbucket.org/bacgroup/pyafipws"
+       }
+       }
+   }
+   )
+    }
+    stage('Integrate')
+    {
+        dir('odoo') {
+            dir("${INSTANCE_NAME}") {
+                dir('odoo') {
+                    dir('extra-addons_tmp') {
+                
+                
+                   parallel (
+     "Odoo Argentina": {
+         dir('odoo-argentina'){
+             git branch: '10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/odoo-argentina'
+         }
+ },
+    "Account Invoicing": {
+        
+         dir('account-invoicing'){
+             git branch: '10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/account-invoicing'
+         }
+ },
+    "Account Finantial Tools 1": {
+        
+         dir('account-finantial-tools1'){
+             git branch: '10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/account-financial-tools-1'
+         }
+ },
+    "Account Finantial Tools": {
+        
+         dir('account-finantial-tools'){
+             git branch: '10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/account-financial-tools'
+         }
+ },
+     "Miscellaneous": {
+        
+         dir('miscellaneous'){
+             git branch: '10.0', depth: '1', url: 'https://github.com/bacgroup/miscellaneous'
+         }
+ },
+      "Partner Contact": {
+        
+         dir('partner-contact'){
+             git branch: '10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/partner-contact'
+         }
+ },
+       "Account Payments": {
+        
+         dir('account-payment'){
+             git branch: '10.0', url: 'https://bitbucket.org/bacgroup/account-payment'
+             //git branch: '9.0', depth: '1', url: 'https://bitbucket.org/bacgroup/account-payment'
+         }
+ },
+       "VITTAR": {
+        
+         dir('vittar'){
+             git branch: '10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/odoo-argentina-vitt'
+         }
+ },
+        "Odoo Enterprise": {
+        
+         dir('odooenterprise'){
+             git branch: '10.0', depth: '1', url: 'https://github.com/bacgroup/enterprise.git'
+         }
+ },
+         "Server Tools": {
+        
+         dir('servertools'){
+             git branch: '10.0', depth: '1', url: 'https://github.com/OCA/server-tools.git'
+         }
+ },
+          "Web": {
+        
+         dir('WEB'){
+             git branch: '10.0', depth: '1', url: 'https://github.com/OCA/web.git'
+         }
+ },
+        "Odoo Base": {
+        
+         dir('odoo-baset10'){
+             git branch: 't10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/odoo-base'
+         }
+ },
+        "Odoo Accounts": {
+        
+         dir('odoo-accountst10'){
+             git branch: 't10.0', depth: '1', url: 'https://bitbucket.org/bacgroup/odoo-account'
+         }
+ },
+   )
+   stage('Integrate Addons'){
+       JIRA="${env.GIT_COMMIT}"
+       jiraComment body: "Inicia proceso automatico de Integracion Continua ${env.JOB_NAME}_${env.BUILD_NUMBER}", issueKey: "${env.CHANGE_TITLE}"
+              sh '''rsync -av --exclude='.git/' */* ../extra-addons/
+       cd ../extra-addons
+       find . -maxdepth 1 -type f -delete
+       '''
+        ODOO_PORT=sh (
+        script: 'port=8069; while netstat -atn | grep -q :$port; do port=$(expr $port + 1); done; echo $port',
+        returnStdout: true
+        ).trim()
+   }
+                        
+                    }
+                    
+                }
+                
+                
+            }
+                    
+                }
+    }
+        stage("Deploy"){
+                parallel (
+   "Odoo ${INSTANCE_NAME} Instance Log": {
+            dir('odoo') {
+            dir("${INSTANCE_NAME}") {
+                sh 'mkdir -p test'
+                
+                sh "python setup/odoo --addons-path odoo/addons/,odoo/extra-addons/ --proxy-mode --db_port=5432 --xmlrpc-port=${ODOO_PORT} --log-level debug --log-request --log-response -u account_check --logfile odoo.log &"
+                
+try {
+
+                       //sh ". env/bin/activate && python createdb.py&"
+                sh '''pwd
+                ls -l
+                touch odoo.log
+                sh -c 'tail -n +0 -f odoo.log | { sed "/werkzeug/ q" && kill $$ ;}' '''
+            }
+            catch (e){ echo "ec"}
+            }
+        }
+   }
+   /*
+   "Odoo ${INSTANCE_NAME} Ready on port ${ODOO_PORT}": {
+                //sh "while ! timeout 1 bash -c 'echo > /dev/tcp/localhost/${ODOO_PORT}'; do sleep 1; done"
+                //sh "curl -s localhost:${ODOO_PORT}"
+                //echo "Odoo Port ${ODOO_PORT}"
+   }*/
+    )
+    }
+        stage('Clean'){
+                dir('odoo') {
+
+                    sh 'rm -rf extra-addons_tmp'
+                    sh "find  .  -iname '.git' | xargs rm -rf"
+                    }
+    }
+    stage('Create Artifacs') {
+                   dir('odoo') {
+                       
+                    sh "tar -ccvf Build_${INSTANCE_NAME}.tar ${INSTANCE_NAME}"
+                    sh "mv Build_${INSTANCE_NAME}.tar ${INSTANCE_NAME}/"   
+                       
+                    dir("${INSTANCE_NAME}"){
+                    sh " bzip2 -9 *.tar"
+                    archiveArtifacts '*.bz2'
+        }
+    }
+   }
+}

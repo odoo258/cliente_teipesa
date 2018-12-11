@@ -1,0 +1,196 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_fiscal_seq_pos
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-20 23:09+0000\n"
+"PO-Revision-Date: 2017-08-22 12:42-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_config_authorization_code_id
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_order_authorization_code_id
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_authorization_code_id
+msgid "Authorization code id"
+msgstr "ID Código de autorización"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:13
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:45
+#, python-format
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: vitt_fiscal_seq_pos
+#: code:addons/vitt_fiscal_seq_pos/models/pos_order.py:101
+#, python-format
+msgid "Error! Select a Fiscal Sequence"
+msgstr "Error! Seleccione una Secuencia Fiscal"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_order_expiration_date
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_expiration_date
+msgid "Expiration Date"
+msgstr "Fecha de caducidad"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:23
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:55
+#, python-format
+msgid "Fecha Exp.:"
+msgstr "Fecha Exp.:"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.ui.view,arch_db:vitt_fiscal_seq_pos.vitt_fiscal_seq_pos_view_pos_pos_form
+msgid "Fiscal Info"
+msgstr "Informacion Fiscal"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_config_sequence_fiscal_id
+msgid "Fiscal Order IDs Sequence"
+msgstr "Secuencia Fiscal"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:26
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:58
+#, python-format
+msgid "Fiscal Regimen:"
+msgstr "Régimen fiscal:"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_order__from
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list__from
+msgid "From"
+msgstr "De"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:12
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:44
+#, python-format
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:20
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:52
+#, python-format
+msgid "Maximo:"
+msgstr "Máximo:"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:17
+#: code:addons/vitt_fiscal_seq_pos/static/src/xml/pos.xml:49
+#, python-format
+msgid "Minimo:"
+msgstr "Mínimo:"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/js/main.js:246
+#, python-format
+msgid "No Numbers Available in this date"
+msgstr "Sin Numeración Disponible en esta Fecha"
+
+#. module: vitt_fiscal_seq_pos
+#. openerp-web
+#: code:addons/vitt_fiscal_seq_pos/static/src/js/main.js:238
+#, python-format
+msgid "No Numbers Available, The Sequence has been Completed"
+msgstr "Numeración No Disponible, La Secuencia ha sido Completada"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model,name:vitt_fiscal_seq_pos.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Punto de venta pedidos"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_order_start_date
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_start_date
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_order_code_type
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_code_type
+msgid "Tax regime code type"
+msgstr "Tipo Regimen Fiscal"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_pos_config_sequence_fiscal_id
+msgid "This sequence must be assigned by the user for Odoo to customize the order numbers of their orders with fiscal sequence."
+msgstr "Esta secuencia debe ser asignada por el usuario para que Odoo pueda personalizar los números de pedido de sus pedidos con secuencia fiscal."
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_order__to
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list__to
+msgid "To"
+msgstr "Para"
+
+#. module: vitt_fiscal_seq_pos
+#: code:addons/vitt_fiscal_seq_pos/models/pos_order.py:106
+#, python-format
+msgid "You can not have two or more active POS with the same Fiscal Sequence"
+msgstr "No puede tener dos o más POS activos con la misma Secuencia Fiscal"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_pos_order_tax_authorization_code
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_tax_authorization_code
+msgid "code autorization"
+msgstr "código de autorización"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_pos_order__to
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list__to
+msgid "destination value"
+msgstr "valor destinado"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_pos_order_expiration_date
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_expiration_date
+msgid "expiration date"
+msgstr "fecha de expiración"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_pos_order__from
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list__from
+msgid "origin value"
+msgstr "valor original"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model,name:vitt_fiscal_seq_pos.model_pos_config
+msgid "pos.config"
+msgstr "Configuración del TPV"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_pos_order_start_date
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_start_date
+msgid "start date"
+msgstr "fecha inicial"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_pos_order_tax_authorization_code
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_tax_authorization_code
+msgid "tax authorization code provided by the taxable entity"
+msgstr "código de autorización fiscal proveído por una entidad fiscal"
+
+#. module: vitt_fiscal_seq_pos
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_pos_order_code_type
+#: model:ir.model.fields,help:vitt_fiscal_seq_pos.field_wizard_hn_pos_order_list_code_type
+msgid "tax regime type code"
+msgstr "código régimen fiscal"

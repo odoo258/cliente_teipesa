@@ -1,0 +1,199 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_vat_arg_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-05 16:15+0000\n"
+"PO-Revision-Date: 2017-06-05 15:20-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.1\n"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_financial_html_report_context
+#: model:ir.model,name:purchase_vat_arg_report.model_account_report_context_common
+msgid "A particular context for a financial report"
+msgstr "Un contexto en particular para un informe financiero"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_partner_ledger_context
+msgid "A particular context for the Partner Ledger report"
+msgstr "Un contexto particular para el Libro Mayor de la Empresa"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_context_aged_payable
+msgid "A particular context for the aged payable"
+msgstr "Un contexto en particular para el informe de Cuentas x Pagar por Antigüedad"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_context_aged_receivable
+msgid "A particular context for the aged receivable"
+msgstr "Un contexto en particular para el informe de Cuentas x Cobrar por Antigüedad"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_report_context_bank_rec
+msgid "A particular context for the bank reconciliation report"
+msgstr "Un contexto en particular para el informe de Conciliación Bancaria"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_context_coa
+msgid "A particular context for the chart of account"
+msgstr "Un contexto en particular para el Plan de Cuentas"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_report_context_followup
+msgid "A particular context for the followup report"
+msgstr "Un contexto en particular para el Informe de Seguimiento"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_context_general_ledger
+msgid "A particular context for the general ledger"
+msgstr "Un contexto en particular para el Libro Mayor"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_report_context_tax
+msgid "A particular context for the generic tax report"
+msgstr "Un contexto en particular para el Informe de Impuestos"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_account_context_purchase_report
+msgid "A particular context for the purchase"
+msgstr "Un contexto en particular para las compras"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_analytic
+msgid "Allow analytic accounting"
+msgstr "Permitir la Contabilidad Analítica"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_multi_company
+msgid "Allow multi-company"
+msgstr "Permitir Multi-Empresas"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_analytic_account_ids
+msgid "Analytic account ids"
+msgstr "Ids. Cuentas Analíticas"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_analytic_tag_ids
+msgid "Analytic tag ids"
+msgstr "Ids. Etiquetas Analíticas"
+
+#. module: purchase_vat_arg_report
+#: model:ir.ui.menu,name:purchase_vat_arg_report.account_reports_purchase_vat_report_menu
+msgid "Argentinean Taxes"
+msgstr "Impuestos Argentinos"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_available_company_ids
+msgid "Available company ids"
+msgstr "Ids. Disponibles de Empresa"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_available_purchase_journal_ids
+msgid "Available purchase journal ids"
+msgstr "Ids. Disponibles de Diarios de Compras"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:173
+#, python-format
+msgid "CUIT/CUIL Supplier"
+msgstr "CUIT/CUIL Proveedor"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_company_ids
+msgid "Company ids"
+msgstr "Ids. Empresa"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_display_name
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_purchase_vat_report_display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:173
+#, python-format
+msgid "Document Type"
+msgstr "Tipo Doc"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_footnotes
+msgid "Footnotes"
+msgstr "Notas al Pie"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_purchase_vat_report_id
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:173
+#, python-format
+msgid "Invoice Date"
+msgstr "Fecha Fac"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:173
+#, python-format
+msgid "Invoice Official No."
+msgstr "Nro. Oficial"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_journal_purchase_ids
+msgid "Journal purchase ids"
+msgstr "Ids. Diario Compras"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report___last_update
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_purchase_vat_report___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:133
+#, python-format
+msgid "Libro IVA Compras (Argentina)"
+msgstr "Libro IVA Compras (Argentina)"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model,name:purchase_vat_arg_report.model_purchase_vat_report
+msgid "Purchase VAT Report"
+msgstr "Libro IVA Compras"
+
+#. module: purchase_vat_arg_report
+#: model:ir.actions.client,name:purchase_vat_arg_report.action_account_report_purchase_vat
+#: model:ir.ui.menu,name:purchase_vat_arg_report.account_reports_purchase_vat_report
+msgid "Purchase Vat Report"
+msgstr "Libro IVA Compras"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:173
+#, python-format
+msgid "Supplier Name"
+msgstr "Proveedor"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:121
+#, python-format
+msgid "Total"
+msgstr "Total"
+
+#. module: purchase_vat_arg_report
+#: model:ir.model.fields,field_description:purchase_vat_arg_report.field_account_context_purchase_report_unfolded_invoice
+msgid "Unfolded lines"
+msgstr "Líneas sin plegar"
+
+#. module: purchase_vat_arg_report
+#: code:addons/purchase_vat_arg_report/models/purchase_vat_report.py:173
+#, python-format
+msgid "VAT Responsibility"
+msgstr "Responsabilidad IVA"

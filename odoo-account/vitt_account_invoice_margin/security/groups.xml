@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vitt_account_invoice_margin_cost" model="res.groups">
+            <field name="name">View Cost Invoice</field>
+        </record>
+
+        <record id="vitt_account_invoice_margin_margin" model="res.groups">
+            <field name="name">View Margin Invoice</field>
+        </record>
+    </data>
+</odoo>

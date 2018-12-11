@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="vitt_base_settings_view" model="ir.ui.view">
+            <field name="name">vitt_base_settings_view</field>
+            <field name="model">vitt_base.config_settings</field>
+            <field name="arch" type="xml">
+                <form string="VITT Settings" class="oe_form_configuration" create="false" delete="false" edit="false">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                    </header>
+                    <group cols="1" colspan="1">
+                        <group string="Partner" cols="1" colspan="1">
+                            <field string="Enable partner extra info" name="partner_extrainfo" class="oe_inline"/>
+                            <field string="Unique Partner by VAT" name="partner_unique_vat" class="oe_inline"/>
+                            <field name="company_id" class="oe_inline" invisible='1'/>
+                        </group>
+                        <group string="Customer Invoices">
+                            <field string="Enable product cost" name="invoice_product_cost" class="oe_inline"/>
+                            <field string="Enable product margin" name="invoice_product_margin" class="oe_inline"/>
+                            <!-- <field string="Use invoice manual sequence" name="invoice_manual_seq" class="oe_inline"/> -->
+                        </group>
+                        <group string="Sales Orders">
+                            <field string="Use sales order type" name="sales_order_type" class="oe_inline"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

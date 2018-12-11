@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="res_users_form_view1" model="ir.ui.view">
+            <field name="name">res.users.form.view</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="point_of_sale.res_users_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='access_rights']" position="after">
+                <page string="Fiscal Printer">
+                   <group string="Fiscal Printer Details">
+                        <field name="printer_model" placeholder='tm-220-af'/>
+                        <field name="printer_port" placeholder='/dev/ttyUSB0'/>
+                        <field name="printer_config"/>
+                   </group>
+                   <group string="POSBOX FISCAL">
+                    <field name="ip_address" placeholder='0.0.0.0:8069'/>
+                   </group>
+                </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="account_invoice_inherite_form" model="ir.ui.view">
+            <field name="name">account.invoice.inherit.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button  type="printer" string="Print Fiscal Receipt" />
+                    <button  type="auto_cancel" string="Auto Cancel"/>
+                    <button  type="report_x" string="Receipt X"/>
+                    <button  type="report_z" string="Receipt z"/>
+                </xpath>
+           </field>
+        </record>
+
+        <record id="account_invoice_supplier_inherit_form" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.inherit.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button type="printer" string="Print Fiscal Receipt"/>
+                    <button  type="auto_cancel" string="Auto Cancel"/>
+                    <button  type="report_x" string="Receipt X"/>
+                    <button  type="report_z" string="Receipt z"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

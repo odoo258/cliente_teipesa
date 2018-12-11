@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_fiscal_printer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-26 14:06+0000\n"
+"PO-Revision-Date: 2017-07-26 11:10-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#. module: pos_fiscal_printer
+#: model:ir.model.fields,field_description:pos_fiscal_printer.field_res_partner_partner_afip_code
+#: model:ir.model.fields,field_description:pos_fiscal_printer.field_res_users_partner_afip_code
+msgid "AFIP_Code"
+msgstr "AFIP_Code"
+
+#. module: pos_fiscal_printer
+#: model:ir.model.fields,help:pos_fiscal_printer.field_res_partner_partner_code
+#: model:ir.model.fields,help:pos_fiscal_printer.field_res_users_partner_code
+msgid "Abbreviation or acronym of this ID type. For example, 'driver_license'"
+msgstr "Abreviación o o acrónimo de este tipo de identificador. Por ejemplo, 'NIF'"
+
+#. module: pos_fiscal_printer
+#: model:ir.model.fields,field_description:pos_fiscal_printer.field_res_partner_partner_code
+#: model:ir.model.fields,field_description:pos_fiscal_printer.field_res_users_partner_code
+msgid "Code"
+msgstr "Código"
+
+#. module: pos_fiscal_printer
+#: model:ir.model.fields,field_description:pos_fiscal_printer.field_pos_order_receipt_number
+msgid "POS Ticket No."
+msgstr "POS Ticket No."
+
+#. module: pos_fiscal_printer
+#: model:ir.model,name:pos_fiscal_printer.model_res_partner
+msgid "Partner"
+msgstr "Cliente"
+
+#. module: pos_fiscal_printer
+#: model:ir.model,name:pos_fiscal_printer.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "Ordenes de Punto de Ventas"
+
+#. module: pos_fiscal_printer
+#: model:ir.model,name:pos_fiscal_printer.model_res_users
+msgid "Users"
+msgstr "Usuarios"

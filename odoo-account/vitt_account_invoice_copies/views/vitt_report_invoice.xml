@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+##############################################################################
+# For copyright and license notices, see __manifest__.py file in module root
+# directory
+##############################################################################
+-->
+<openerp>
+<data>
+
+<template id="report_invoice_document_copies" inherit_id="account.report_invoice_document">
+    <xpath expr="//t/div/p[3]" position="after">
+        <div class="legends">
+            <t t-if="invoice_copy">  <t t-esc = "invoice_copy"/> </t>
+        </div>
+    </xpath>
+</template>
+    
+<template id="report_invoice">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-if="o.company_id.legend_ids">
+              <t t-foreach="o.company_id.legend_ids" t-as="p">
+                  <t t-set="invoice_copy" t-value="p.name"/>
+                  <t t-call="vitt_account_invoice_copies.report_invoice_document_copies" t-lang="o.partner_id.lang"/>
+              </t>
+            </t>
+            <t t-if="not o.company_id.legend_ids">            
+                <t t-set="invoice_copy" t-value="''"/>
+                <t t-call="vitt_account_invoice_copies.report_invoice_document_copies" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </t>
+</template>
+
+</data>
+</openerp>
+

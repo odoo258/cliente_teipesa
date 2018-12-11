@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="wizard_format_print_form">
+            <field name="name">wizard.formats.print.form</field>
+            <field name="model">wizard.formats.print</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="format_id" options="{'no_create': True}" 
+                            required="1" 
+                            domain="[('main_model', '=', context.get('model_active')), '|', ('states', 'like', context.get('state')), ('states', '=', False), '|', ('user_ids', 'in', context.get('uid')), ('user_ids', '=', False)]"
+                        />
+                    </group>
+                    <footer>
+                        <button name="action_call_report" string="Print" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_format_print" model="ir.actions.act_window">
+            <field name="name">Print Format</field>
+            <field name="res_model">wizard.formats.print</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+
+            <field name="context">{'model_active': context.get('active_model', False), 'user_id': context.get('uid', False)}</field>
+        </record>
+
+    </data>
+</odoo>

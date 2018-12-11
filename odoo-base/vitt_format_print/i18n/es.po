@@ -1,0 +1,1992 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_format_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-29 16:15+0000\n"
+"PO-Revision-Date: 2017-08-17 10:16-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%A - Full weekday name."
+msgstr "%A - Nombre completo del día de la semana."
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%B - Full month name.\""
+msgstr "%B - Nombre de mes completo.\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%H - Hour (24-hour clock) [00,23].\""
+msgstr "%H - Hora (reloj 24-horas) [00,23].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%I - Hour (12-hour clock) [01,12].\""
+msgstr "%I - Hora (reloj 12-horas) [01,12].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%M - Minute [00,59].\""
+msgstr "%M - Minuto [00,59].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%S - Seconds [00,61].\""
+msgstr "%S - Segundos [00,61].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%Y - Year with century.\""
+msgstr "%Y - Año con siglo.\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%a - Abbreviated weekday name."
+msgstr "%a - Nombre abreviado del día de la semana."
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%b - Abbreviated month name."
+msgstr "%b - Nombre abreviado del mes."
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%d - Day of the month [01,31].\""
+msgstr "%d - Día del mes [01,31].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%d = day, %m = month, %Y = Year. For more Help, See 'Date Format Help' tab"
+msgstr "%d = day, %m = month, %Y = Year. For more Help, See 'Date Format Help' tab"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%j - Day of the year [001,366].\""
+msgstr "%j - Día del año [001,366].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%m - Month number [01,12].\""
+msgstr "%m - Número mes [01,12].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%p - Equivalent of either AM or PM.\""
+msgstr "%p - Equivalente a cualquier AM o PM.\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%w - Weekday number [0(Sunday),6].\""
+msgstr "%w - Día de la semana [0(domingo),6].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "%y - Year without century [00,99].\""
+msgstr "%y - Año sin el siglo [00,99].\""
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "1. %b, %B         ==&gt; Dec, December"
+msgstr "1. %b, %B         ==&gt; Dic, Diciembre"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "2. %a ,%A         ==&gt; Fri, Friday"
+msgstr "2. %a ,%A         ==&gt; Vie, Viernes"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "3. %y, %Y         ==&gt; 08, 2008"
+msgstr "3. %y, %Y         ==&gt; 08, 2008"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "4. %d, %m         ==&gt; 05, 12"
+msgstr "4. %d, %m         ==&gt; 05, 12"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "5. %H:%M:%S      ==&gt; 18:25:20"
+msgstr "5. %H:%M:%S      ==&gt; 18:25:20"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "6. %I:%M:%S %p  ==&gt; 06:25:20 PM"
+msgstr "6. %I:%M:%S %p  ==&gt; 06:25:20 PM"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "7. %j              ==&gt; 340"
+msgstr "7. %j              ==&gt; 340"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "8. %S              ==&gt; 20"
+msgstr "8. %S              ==&gt; 20"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "9. %w              ==&gt; 5 ( Friday is the 6th day)"
+msgstr "9. %w ==&gt; 5 ( Viernes es el 6º día)"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_arguments
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Argument"
+msgstr "Argumento"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_argument_type
+msgid "Argument Type"
+msgstr "Tipo de argumento"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Arguments"
+msgstr "Argumentos"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_format_arguments_lines
+msgid "Arguments in Format"
+msgstr "Argumentos En Formato"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_bottom_size
+msgid "B.Bottom Size"
+msgstr "B.Inferior Tamaño"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_left_size
+msgid "B.Left Size"
+msgstr "B.Izquierdo Tamaño"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_right_size
+msgid "B.Right Size"
+msgstr "B.Derecho Tamaño"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_top_size
+msgid "B.Top Size"
+msgstr "B.Superior Tamaño"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_font_bold
+msgid "Bold"
+msgstr "Negrita"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_bottom
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_bottom_color
+msgid "Border Bottom"
+msgstr "Borde Inferior"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_bottom_style
+msgid "Border Bottom Style"
+msgstr "Estilo Borde Inferior"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_bottom_unit
+msgid "Border Bottom Unit"
+msgstr "Unidad Borde Inferior"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_left
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_left_color
+msgid "Border Left"
+msgstr "Borde Izquierdo"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_left_style
+msgid "Border Left Style"
+msgstr "Estilo Borde Izquierdo"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_left_unit
+msgid "Border Left Unit"
+msgstr "Unidad Borde Inferior"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_right
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_right_color
+msgid "Border Right"
+msgstr "Borde Derecho"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_right_style
+msgid "Border Right Style"
+msgstr "Estilo Borde Derecho"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_right_unit
+msgid "Border Right Unit"
+msgstr "Unidad Borde Derecho"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_top
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_top_color
+msgid "Border Top"
+msgstr "Borde Superior"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_top_style
+msgid "Border Top Style"
+msgstr "Estilo Borde Superior"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_border_top_unit
+msgid "Border Top Unit"
+msgstr "Unidad Borde Superior"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Borders"
+msgstr "Bordes"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.wizard_format_print_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,text_align:0
+msgid "Center"
+msgstr "Centrar"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_child_models_ids
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_main_models_form_view
+msgid "Child Models"
+msgstr "Modelos Hijos"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_company_id
+msgid "Company id"
+msgstr "ID de Compañía"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Configuration Form"
+msgstr "Formulario Configuración"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_copies_line_ids
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Copies"
+msgstr "Copias"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_name
+msgid "Copy Name"
+msgstr "Nombre Copia"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_create_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_create_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_create_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_create_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_create_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_create_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_create_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_create_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_create_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_create_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Date Format Help"
+msgstr "Ayuda Formato Fecha"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_display_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_display_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_display_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_display_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_display_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_report_vitt_format_print_format_print_template_display_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Examples"
+msgstr "Ejemplos"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_other_field
+msgid "Field Name"
+msgstr "Nombre de campo"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_font_color
+msgid "Font Color"
+msgstr "Color Fuente"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_font_size
+msgid "Font Size"
+msgstr "Tamaño Fuente"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_format_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_format_id
+msgid "Format"
+msgstr "Formato"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_format_copies_lines
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Format Copies"
+msgstr "Copias de Formato"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_format_date
+msgid "Format Date"
+msgstr "Formato Fecha"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_name
+msgid "Format Line"
+msgstr "Formato de Línea"
+
+#. module: vitt_format_print
+#: model:ir.actions.report.xml,name:vitt_format_print.format_print_report
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print_format_id
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_tree_view
+msgid "Format Print"
+msgstr "Formato Impresión"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_format_number
+msgid "Format number"
+msgstr "Formato de número"
+
+#. module: vitt_format_print
+#: model:ir.actions.act_window,name:vitt_format_print.action_menu_formats_print
+#: model:ir.ui.menu,name:vitt_format_print.menuitem_formats_print
+#: model:ir.ui.menu,name:vitt_format_print.menuitem_formats_print_parent
+msgid "Formats Print"
+msgstr "Formatos de Impresión"
+
+#. module: vitt_format_print
+#: model:ir.actions.act_window,name:vitt_format_print.action_menu_formats_print_main_models
+#: model:ir.ui.menu,name:vitt_format_print.menuitem_formats_print_main_model
+msgid "Formats Print - Main Models"
+msgstr "Formatos de Impresión - Modelos"
+
+#. module: vitt_format_print
+#: model:res.groups,name:vitt_format_print.vitt_format_print_manager
+msgid "Formats Print Manager"
+msgstr "Formatos de Impresión Administrador"
+
+#. module: vitt_format_print
+#: model:res.groups,name:vitt_format_print.vitt_format_print_user
+msgid "Formats Print User"
+msgstr "Formatos de Impresión Usuario"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_from_model
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_from_model_id
+msgid "From Model"
+msgstr "Desde Modelo"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_height
+msgid "Height (Z)"
+msgstr "Altura (Z)"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_report_vitt_format_print_format_print_template_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_image
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Image"
+msgstr "Imagen"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_image_field
+msgid "Image Field"
+msgstr "Campo Imagen"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_is_matrix
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_is_matrix
+msgid "Is Matrix"
+msgstr "Es Matriz"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_font_italic
+msgid "Italic"
+msgstr "Cursiva"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,text_align:0
+msgid "Justify"
+msgstr "Justificado"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines___last_update
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines___last_update
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print___last_update
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models___last_update
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models___last_update
+#: model:ir.model.fields,field_description:vitt_format_print.field_report_vitt_format_print_format_print_template___last_update
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_write_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_write_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_write_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_write_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_write_uid
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_write_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_copies_lines_write_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_write_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_write_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_write_date
+#: model:ir.model.fields,field_description:vitt_format_print.field_wizard_formats_print_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,text_align:0
+msgid "Left"
+msgstr "Izquierda"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_left_margin
+msgid "Left Margin (X)"
+msgstr "Margen Izquierdo (X)"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Legends for supported Date and Time Formats"
+msgstr "Leyenda para formatos soportados de fecha y hora"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_main_model
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_main_model_id
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_model
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_model_id
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_main_models_form_view
+msgid "Main Model"
+msgstr "Modelo Principal"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_main_model_id
+msgid "Main model id"
+msgstr "Modelo Principal"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_matrix_field
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_matrix_field
+msgid "Matrix Field"
+msgstr "Campo Matriz"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_model_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_model_name
+msgid "Model"
+msgstr "Modelo"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_child_models_name
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_main_models_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: vitt_format_print
+#: model:format.print.main_models,name:vitt_format_print.main_no_model
+msgid "No Model"
+msgstr "Sin Modelo"
+
+#. module: vitt_format_print
+#: model:format.print.child_models,name:vitt_format_print.child_no_model
+msgid "No child Model"
+msgstr "Sin Modelo Hijo"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Page Dimension"
+msgstr "Dimensión de Página"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_page_height
+msgid "Page Height (mm)"
+msgstr "Alto de página (mm)"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_page_width
+msgid "Page Width (mm)"
+msgstr "Ancho de página (mm)"
+
+#. module: vitt_format_print
+#: code:addons/vitt_format_print/models/format_print.py:313
+#, python-format
+msgid "Page height and width can not be less than Zero(0)."
+msgstr "Ancho y alto de la página no pueden ser inferior a Cero(0)."
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_paper_format_id
+msgid "Paper Format"
+msgstr "Formato de papel"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Position / Font"
+msgstr "Posición / Fuente"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_prefix
+msgid "Prefix"
+msgstr "Prefijo"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.format_print_form_view
+msgid "Prefix and Suffix"
+msgstr "Prefijo y Sufijo"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.wizard_format_print_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_arguments_line_ids
+msgid "Print Arguments"
+msgstr "Agumentos de Impresión"
+
+#. module: vitt_format_print
+#: model:ir.actions.act_window,name:vitt_format_print.action_format_print
+msgid "Print Format"
+msgstr "Formato de Impresión"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,text_align:0
+msgid "Right"
+msgstr "Derecha"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_sample
+msgid "Sample"
+msgstr "Ejemplo"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,help:vitt_format_print.field_format_print_user_ids
+msgid "Select the users who can print this format"
+msgstr "Seleccione los usuarios que podrán imprimir este formato"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_states
+msgid "States"
+msgstr "Estados"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_suffix
+msgid "Suffix"
+msgstr "Sufijo"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_other_text
+msgid "Text"
+msgstr "Texto"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_text_align
+msgid "Text Align"
+msgstr "Alinear Texto"
+
+#. module: vitt_format_print
+#: code:addons/vitt_format_print/models/format_print.py:249
+#, python-format
+msgid "The Model '%s' is not allowed in this format. %s"
+msgstr "El Modelo '%s' No está permitido en este formato. %s"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,help:vitt_format_print.field_format_arguments_lines_image
+msgid "This field holds the image used as photo for the group, limited to 1024x1024px."
+msgstr "Este campo contendrá la imagen usada como foto de grupo, acotada a 1024x1024px."
+
+#. module: vitt_format_print
+#: model:ir.model.fields,help:vitt_format_print.field_format_arguments_lines_prefix
+msgid "This text will appear on the left side of the printed value"
+msgstr "Este texto aparecerá en el lado izquierdo del valor impreso"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,help:vitt_format_print.field_format_arguments_lines_suffix
+msgid "This text will appear on the right side of the printed value"
+msgstr "Este texto aparecerá en el lado derecho del valor impreso"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_top_margin
+msgid "Top Margin (Y)"
+msgstr "Margen Superior (Y)"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_font_unit
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_height_unit
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_left_unit
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_top_unit
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_width_unit
+msgid "Unit Measure"
+msgstr "Unidad Medida"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_height_f
+msgid "Use Height"
+msgstr "Usar Altura"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_width_f
+msgid "Use Width"
+msgstr "Usar Ancho"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_print_user_ids
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: vitt_format_print
+#: model:ir.model.fields,field_description:vitt_format_print.field_format_arguments_lines_width
+msgid "Width"
+msgstr "Ancho"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "aliceblue"
+msgstr "aliceblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "antiquewhite"
+msgstr "antiquewhite"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "aqua"
+msgstr "aqua"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "aquamarine"
+msgstr "aquamarine"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "azure"
+msgstr "azure"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "beige"
+msgstr "beige"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "bisque"
+msgstr "bisque"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "black"
+msgstr "negro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "blanchedalmond"
+msgstr "blanchedalmond"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "blue"
+msgstr "azul"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "blueviolet"
+msgstr "blueviolet"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "brown"
+msgstr "cafe"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "burlywood"
+msgstr "burlywood"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "cadetblue"
+msgstr "cadetblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "chartreuse"
+msgstr "chartreuse"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "chocolate"
+msgstr "chocolate"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "coral"
+msgstr "coral"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "cornflowerblue"
+msgstr "cornflowerblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "cornsilk"
+msgstr "cornsilk"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "crimson"
+msgstr "crimson"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "cyan"
+msgstr "cyan"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkblue"
+msgstr "azuloscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkcyan"
+msgstr "cyanoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkgoldenrod"
+msgstr "goldenrodoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkgray"
+msgstr "grisoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkgreen"
+msgstr "verdeoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkkhaki"
+msgstr "khakioscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkmagenta"
+msgstr "magentaoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkolivegreen"
+msgstr "olivegreenoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkorange"
+msgstr "orangeoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkorchid"
+msgstr "orchidoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkred"
+msgstr "rojooscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darksalmon"
+msgstr "salmonoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkseagreen"
+msgstr "seagreenoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkslateblue"
+msgstr "slateblueoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkslategray"
+msgstr "slategrayoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkturquoise"
+msgstr "turquoiseoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "darkviolet"
+msgstr "violetoscuro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "deeppink"
+msgstr "deeppink"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "deepskyblue"
+msgstr "deepskyblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "dimgray"
+msgstr "dimgray"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "dodgerblue"
+msgstr "dodgerblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "firebrick"
+msgstr "firebrick"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "floralwhite"
+msgstr "floralwhite"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "forestgreen"
+msgstr "forestgreen"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_format_print
+msgid "format.print"
+msgstr "format.print"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_format_print_child_models
+msgid "format.print.child_models"
+msgstr "format.print.child_models"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_format_print_main_models
+msgid "format.print.main_models"
+msgstr "format.print.main_models"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_format_print_models
+msgid "format.print.models"
+msgstr "format.print.models"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "fuchsia"
+msgstr "fuchsia"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "gainsboro"
+msgstr "gainsboro"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "ghostwhite"
+msgstr "ghostwhite"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "gold"
+msgstr "dorado"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "goldenrod"
+msgstr "goldenrod"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "gray"
+msgstr "gris"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "green"
+msgstr "verde"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "greenyellow"
+msgstr "greenyellow"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "honeydew"
+msgstr "honeydew"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "hotpink"
+msgstr "hotpink"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "indianred"
+msgstr "indianred"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "indigo"
+msgstr "indigo"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "ivory"
+msgstr "ivory"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "khaki"
+msgstr "khaki"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lavender"
+msgstr "lavender"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lavenderblush"
+msgstr "lavenderblush"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lawngreen"
+msgstr "lawngreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lemonchiffon"
+msgstr "lemonchiffon"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightblue"
+msgstr "lightblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightcoral"
+msgstr "lightcoral"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightcyan"
+msgstr "lightcyan"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightgoldenrodyellow"
+msgstr "lightgoldenrodyellow"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightgray"
+msgstr "lightgray"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightgreen"
+msgstr "lightgreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightpink"
+msgstr "lightpink"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightsalmon"
+msgstr "lightsalmon"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightseagreen"
+msgstr "lightseagreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightskyblue"
+msgstr "lightskyblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightslategray"
+msgstr "lightslategray"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightsteelblue"
+msgstr "lightsteelblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lightyellow"
+msgstr "lightyellow"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "lime"
+msgstr "lima"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "limegreen"
+msgstr "limegreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "linen"
+msgstr "linen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "magenta"
+msgstr "magenta"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "maroon"
+msgstr "maroon"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumaquamarine"
+msgstr "mediumaquamarine"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumblue"
+msgstr "mediumblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumorchid"
+msgstr "mediumorchid"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumpurple"
+msgstr "mediumpurple"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumseagreen"
+msgstr "mediumseagreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumslateblue"
+msgstr "mediumslateblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumspringgreen"
+msgstr "mediumspringgreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumturquoise"
+msgstr "mediumturquoise"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mediumvioletred"
+msgstr "mediumvioletred"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "midnightblue"
+msgstr "midnightblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mintcream"
+msgstr "mintcream"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "mistyrose"
+msgstr "mistyrose"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "moccasin"
+msgstr "moccasin"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "navajowhite"
+msgstr "navajowhite"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "navy"
+msgstr "navy"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "oldlace"
+msgstr "oldlace"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "olive"
+msgstr "olive"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "olivedrab"
+msgstr "olivedrab"
+
+#. module: vitt_format_print
+#: model:ir.ui.view,arch_db:vitt_format_print.wizard_format_print_form
+msgid "or"
+msgstr "o"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "orange"
+msgstr "naranja"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "orangered"
+msgstr "orangered"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "orchid"
+msgstr "orchid"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "palegoldenrod"
+msgstr "palegoldenrod"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "palegreen"
+msgstr "palegreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "paleturquoise"
+msgstr "paleturquoise"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "palevioletred"
+msgstr "palevioletred"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "papayawhip"
+msgstr "papayawhip"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "peachpuff"
+msgstr "peachpuff"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "peru"
+msgstr "peru"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "pink"
+msgstr "rosa"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "plum"
+msgstr "plum"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "powderblue"
+msgstr "powderblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "purple"
+msgstr "purple"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "red"
+msgstr "rojo"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_report_vitt_format_print_format_print_template
+msgid "report.vitt_format_print.format_print_template"
+msgstr "report.vitt_format_print.format_print_template"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "rosybrown"
+msgstr "rosybrown"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "royalblue"
+msgstr "royalblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "saddlebrown"
+msgstr "saddlebrown"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "salmon"
+msgstr "salmon"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "sandybrown"
+msgstr "sandybrown"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "seagreen"
+msgstr "seagreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "seashell"
+msgstr "seashell"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "sienna"
+msgstr "sienna"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "silver"
+msgstr "silver"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "skyblue"
+msgstr "skyblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "slateblue"
+msgstr "slateblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "slategray"
+msgstr "slategray"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "snow"
+msgstr "snow"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "springgreen"
+msgstr "springgreen"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "steelblue"
+msgstr "steelblue"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "tan"
+msgstr "tan"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "teal"
+msgstr "teal"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "thistle"
+msgstr "thistle"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "tomato"
+msgstr "tomato"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "turquoise"
+msgstr "turquoise"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "violet"
+msgstr "violeta"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "wheat"
+msgstr "wheat"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "white"
+msgstr "blanco"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "whitesmoke"
+msgstr "whitesmoke"
+
+#. module: vitt_format_print
+#: model:ir.model,name:vitt_format_print.model_wizard_formats_print
+msgid "wizard.formats.print"
+msgstr "wizard.formats.print"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "yellow"
+msgstr "amarillo"
+
+#. module: vitt_format_print
+#: selection:format.arguments.lines,border_bottom_color:0
+#: selection:format.arguments.lines,border_left_color:0
+#: selection:format.arguments.lines,border_right_color:0
+#: selection:format.arguments.lines,border_top_color:0
+#: selection:format.arguments.lines,font_color:0
+msgid "yellowgreen"
+msgstr "yellowgreen"

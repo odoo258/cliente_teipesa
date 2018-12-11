@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="res_partner_form_extra_info" model="ir.ui.view">
+            <field name="name">res.partner.form.extra_info</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="property_account_position_id" position="after">
+                        <label for="other_company_reg"/>
+                        <div name="vat_info" class="o_row">
+                            <field name="other_company_reg" placeholder="Other Company Registry"/>
+                        </div>
+                    </field>
+                    <notebook position="inside" >
+                    <page string="Extra Info" attrs="{'invisible': [('partner_extrainfo', '=', False)]}" >
+                        <group name="container_row_2">
+                            <group string="Profile" name="info_personal">
+                                 <field name="birthdate"/>
+                                 <field name="document_type"/>
+                                 <field name="document_number"/>
+                                 <field name="nationality"/>
+                                 <field name="place_birth"/>
+                                 <field name="profession"/>
+                                 <field name="gender"/>
+                                 <field name="civil_status"/>
+                                 <field name="partner_extrainfo" invisible="1"/>
+                            </group>
+                        </group>
+                    </page>
+                    </notebook>
+                </data>
+            </field>
+        </record>
+
+        <!-- Partner tree view inherited -->
+        <record id="vitt_view_res_partner_tree" model="ir.ui.view">
+            <field name="name">res.partner.tree.vitt</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="display_name" position="after">
+                    <field name="vat"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="vitt_base_view_res_partner_filter" model="ir.ui.view">
+            <field name="name">res.partner.select.vitt</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="vat"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
+

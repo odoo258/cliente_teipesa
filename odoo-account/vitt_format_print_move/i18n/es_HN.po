@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_format_print_move
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-03 21:31+0000\n"
+"PO-Revision-Date: 2017-10-03 15:33-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_HN\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: vitt_format_print_move
+#: model:format.print.child_models,name:vitt_format_print_move.child_account_move
+#: model:format.print.main_models,name:vitt_format_print_move.main_account_move
+msgid "Account - Move"
+msgstr "Contabilidad - Asiento"
+
+#. module: vitt_format_print_move
+#: model:format.print.child_models,name:vitt_format_print_move.child_account_move_line
+msgid "Account - Move Line"
+msgstr "Contabilidad - Líneas de Asiento"
+
+#. module: vitt_format_print_move
+#: model:ir.ui.view,arch_db:vitt_format_print_move.vitt_view_account_move_form_inherit
+msgid "Print Move"
+msgstr "Imprimir Asiento"

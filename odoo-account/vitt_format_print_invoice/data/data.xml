@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+        <record id="main_account_invoice" model="format.print.main_models" >
+            <field name="model_name">account.invoice</field>
+            <field name="name">Account - Invoice</field>
+        </record>
+
+        <record id="child_account_account_invoice" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_invoice"/>
+            <field name="model_name">account.invoice</field>
+            <field name="name">Account - Invoice</field>
+        </record>
+        <record id="child_account_account_invoice_line" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_invoice"/>
+            <field name="model_name">account.invoice.line</field>
+            <field name="name">Account - Invoice Line</field>
+            <field name="is_matrix">1</field>
+            <field name="matrix_field">invoice_line_ids</field>
+        </record>
+        <record id="child_account_invoice_tax" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_invoice"/>
+            <field name="model_name">account.invoice.tax</field>
+            <field name="name">Account - Invoice Tax</field>
+            <field name="is_matrix">1</field>
+            <field name="matrix_field">tax_line_ids</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="vitt_accounting_agile_view_move_form_inh" model="ir.ui.view" >
+            <field name="name">vitt_accounting_agile.account.move.form.inh</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form" />
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="line_ids"]' position="after">
+                    <field name='unbalanced_flag' invisible='1'/>
+                    <!-- <group class="oe_subtotal_footer oe_right" attrs="{'invisible': [('unbalanced_flag', '=', False)]}" > -->
+                    <group class="oe_subtotal_footer oe_right" >
+                        <field name='t_debit'/>
+                        <field name='t_credit' />
+                        <field name='unbalanced_diff' class="oe_subtotal_footer_separator" />
+                    </group>
+                </xpath>
+                <xpath expr='//field[@name="debit"]' position="before">
+                    <field name='rate' groups="base.group_multi_currency"/>
+                </xpath>
+                <xpath expr='//field[@name="credit"]' position="after">
+                    <field name='do_balance' />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

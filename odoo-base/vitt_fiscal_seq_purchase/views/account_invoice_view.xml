@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <!-- Factura de Compra -->
+    <record id="invoice_supplier_fiscal_seq_form_inherit" model="ir.ui.view">
+        <field name="name">invoice.supplier.fiscal_seq.form.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_due']" position="after">
+                <field name="fiscal_control"/>
+                <field 
+                    name="sequence_ids" 
+                    attrs="{'invisible': [('fiscal_control','=',False)], 'required': [('fiscal_control', '=', True)]}"
+                    options="{'no_create': True}"
+                />
+                <field 
+                    name="fiscal_number"
+                    attrs="{'invisible': [('fiscal_control','=',False)], 'required': [('fiscal_control', '=', True)]}"
+                    options="{'no_create': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+    
+</data>
+</odoo>
+
+

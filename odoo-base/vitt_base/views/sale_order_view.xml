@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_order_form" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="payment_term_id" position="after">
+                    <field name="order_type" attrs="{'invisible': [('sales_order_type', '=', False)]}" />
+                    <field name="sales_order_type" invisible="1" />
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

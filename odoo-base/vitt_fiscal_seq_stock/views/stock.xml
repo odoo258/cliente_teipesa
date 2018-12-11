@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="stock_picking_form" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherit</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="origin" position="after">
+                        <field name="fiscal_control"/>
+                        <field name="fiscal_secuence" domain="[('code', '=', 'remission')]" attrs="{'invisible': [('fiscal_control','=',False)]}"/>
+                        <field name="fiscal_number" attrs="{'invisible': [('fiscal_control','=',False)]}"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

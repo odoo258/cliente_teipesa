@@ -1,0 +1,4 @@
+id,name,code,iso_code,direction,grouping,decimal_point,thousands_sep,date_format,time_format,translatable
+base.lang_es_HN,Spanish (HN) / Español (HN),es_HN,es_HN,Left-to-Right,"[3,0]",.,",",%d/%m/%Y,%H:%M:%S,TRUE
+base.lang_es_NI,Spanish (NI) / Español (NI),es_NI,es_NI,Left-to-Right,"[3,0]",.,",",%d/%m/%Y,%H:%M:%S,TRUE
+base.lang_es_SV,Spanish (SV) / Español (SV),es_SV,es_SV,Left-to-Right,"[3,0]",.,",",%d/%m/%Y,%H:%M:%S,TRUE

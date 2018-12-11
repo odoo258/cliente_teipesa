@@ -1,0 +1,2 @@
+- Manage Fiscal Sequences in POS Module
+- Print Fiscal Data in POS Ticket

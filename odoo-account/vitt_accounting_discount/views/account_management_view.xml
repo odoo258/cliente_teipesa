@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="vitt_account_management_config_settings_view1" model="ir.ui.view">
+            <field name="name">vitt_account_management_config_settings_view</field>
+            <field name="model">vitt_account_management.config_settings</field>
+             <field name="inherit_id" ref="vitt_account_management.vitt_account_management_config_settings_view" />
+            <field name="arch" type="xml">
+                <field name="property_account_income_id" position="after">
+                    <field name="property_account_discount_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="format_print_tree_view" model="ir.ui.view">
+            <field name="name">VITT Format Print Tree</field>
+            <field name="model">format.print</field>
+            <field name="arch" type="xml">
+                <tree string="Format Print">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="format_print_form_view" model="ir.ui.view">
+            <field name="name">VITT Format Print Form</field>
+            <field name="model">format.print</field>
+            <field name="arch" type="xml">
+                <form string="Configuration Form">
+                    <field name='company_id' invisible='1'/>
+                    <field name='id' invisible='1'/>
+                    <sheet>
+                        <group colspan='2'>
+                            <group>
+                                <field name="main_model_id" options="{'no_create': True}"/>
+                                <field name="main_model" invisible='1'/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="user_ids" widget="many2many_tags"/>
+                            <field name="states"/>
+                        </group>
+                        <group string="Page Dimension">
+                            <field name="page_height" style="width:20%" />
+                            <field name="page_width" style="width:20%" />
+                        </group>
+                        <notebook>
+                            <page string='Arguments' name="arguments"
+                                widget="one2many_list" mode="tree,form" 
+                                >
+                                <field name="arguments_line_ids" context="{'format_id': id, 'main_model': main_model, 'main_model_id': main_model_id}">
+                                    <form name="Print Argument">
+                                        <div class="oe_title">
+                                            <label for="name" string="Argument" class="oe_edit_only"/>
+                                            <h1>
+                                                <field name="name" class="oe_inline"/>
+                                            </h1>
+                                        </div>
+                                        <group colspan='2'>
+                                            <group>
+                                                <field name='from_model_id' domain="[('main_model_id', '=', main_model_id)]" options="{'no_create': True}" />
+                                                <field name='main_model_id' invisible='1'/>
+                                                <field name='from_model' invisible='1'/>
+                                                <field name='main_model' invisible='1'/>
+                                                <field name='is_matrix' invisible='1'/>
+                                                <field name='matrix_field' invisible='1'/>
+                                            </group>
+                                            <group>
+                                                <field name="arguments"/>
+                                            </group>
+                                        </group>
+                                        <div attrs="{'invisible': [('arguments', '!=', 'other_field')]}" >
+                                            <label for="other_field" />
+                                            <field name="other_field" attrs="{'required': [('arguments', '=', 'other_field')]}"/>
+                                        </div>
+                                        <group attrs="{'invisible': [('arguments', '!=', 'other_field')]}" colspan='2' >
+                                            <group>
+                                                <field name="argument_type"/>
+                                            </group>
+                                            <group >
+                                                <field name="format_date" 
+                                                    help="%d = day, %m = month, %Y = Year. For more Help, See 'Date Format Help' tab"
+                                                    attrs="{'invisible': [('argument_type', '!=', 'date')]}"
+                                                />
+                                                <field name="format_number" 
+                                                    attrs="{'invisible': [('argument_type', 'not in', ('number', 'currency'))], 'required': [('argument_type', 'in', ('number', 'currency'))]}"
+                                                />
+                                            </group>
+                                        </group>
+                                        <group attrs="{'invisible': [('arguments', '!=', 'text')]}">
+                                            <field name="other_text"/>
+                                        </group>
+                                        <group string='Image' attrs="{'invisible': [('arguments', '!=', 'image')]}">
+                                            <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium"}'/>
+                                            <field name="image_field"/>
+                                        </group>
+                                        <notebook>
+                                            <page string='Position / Font'>
+                                                <group string="Position / Font" >
+                                                    <group name="margins">
+                                                        <div class="oe_inline">
+                                                            <label for="top_margin" style="width: 40mm"/>
+                                                            <field name="top_margin" style="width: 15mm"/><label string=" - "/>
+                                                            <field name="top_unit" style="width: 15mm"/>
+                                                        </div>
+                                                        <newline/>
+                                                        <div class="oe_inline">
+                                                            <label for="left_margin" style="width: 40mm"/>
+                                                            <field name="left_margin" style="width: 15mm"/><label string=" - "/>
+                                                            <field name="left_unit" style="width: 15mm"/>
+                                                        </div>
+                                                    </group>
+                                                    <group>
+                                                        <div class="oe_inline">
+                                                            <label for="font_size" style="width: 40mm"/>
+                                                            <field name="font_size" style="width: 15mm"/><label string=" - "/>
+                                                            <field name="font_unit" style="width: 15mm"/>
+                                                        </div>
+                                                        <newline/>
+                                                        <div class="oe_inline">
+                                                            <label for="font_bold"/>
+                                                            <field name="font_bold" style="width: 10mm"/>
+                                                            <label for="font_italic"/>
+                                                            <field name="font_italic" style="width: 10mm"/>
+                                                        </div>
+                                                        <newline/>
+                                                        <div class="oe_inline">
+                                                            <label for="text_align" style="width: 40mm"/>
+                                                            <field name="text_align" style="width: 45mm"/>
+                                                            <label for="font_color" style="width: 40mm"/>
+                                                            <field name="font_color" style="width: 45mm"/>
+                                                        </div>
+                                                    </group>
+                                                    <group name="width_height" style="width: 100%" >
+                                                        <group>
+                                                            <div class="oe_inline">
+                                                                <label for="width_f" style="width: 40mm"/>
+                                                                <field name="width_f"/>
+                                                            </div>
+                                                            <newline/>
+                                                            <div attrs="{'invisible': [('width_f', '=', False)]}" class="oe_inline">
+                                                                <label for="width" style="width: 40mm"/>
+                                                                <field name="width" style="width: 15mm"/><label string=" - "/>
+                                                                <field name="width_unit" style="width: 15mm"/>
+                                                            </div>
+                                                        </group>
+                                                        <group>
+                                                            <div class="oe_inline">
+                                                                <label for="height_f" style="width: 40mm"/>
+                                                                <field name="height_f"/>
+                                                            </div>
+                                                            <newline/>
+                                                            <div attrs="{'invisible': [('height_f', '=', False)]}" class="oe_inline">
+                                                                <label for="height" style="width: 40mm"/>
+                                                                <field name="height" style="width: 15mm"/><label string=" - "/>
+                                                                <field name="height_unit" style="width: 15mm"/>
+                                                            </div>
+                                                        </group>
+                                                    </group>
+                                                    <group class="oe_edit_only">
+                                                        <img src='/vitt_format_print/static/image/margins.png'/>
+                                                    </group>
+                                                </group>
+                                            </page>
+                                            <page string='Prefix and Suffix'>
+                                                <group>
+                                                    <field name='prefix'/>
+                                                    <field name='suffix'/>
+                                                </group>
+                                                <div>
+                                                    <field name='sample'/>
+                                                </div>
+                                            </page>
+                                            <page string='Borders'>
+                                                <div class="oe_inline">
+                                                    <label for="border_top" style="width: 25mm"/>
+                                                    <field name="border_top" style="width: 25mm" />
+                                                    <field name="border_top_size" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_top_unit" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_top_style" style="width: 25mm" /><label string=" - "/>
+                                                    <field name="border_top_color" style="width: 25mm" />
+                                                </div>
+                                                <div class="oe_inline">
+                                                    <label for="border_bottom" style="width: 25mm"/>
+                                                    <field name="border_bottom" style="width: 25mm" />
+                                                    <field name="border_bottom_size" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_bottom_unit" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_bottom_style" style="width: 25mm" /><label string=" - "/>
+                                                    <field name="border_bottom_color" style="width: 25mm" />
+                                                </div>
+                                                <div class="oe_inline">
+                                                    <label for="border_left" style="width: 25mm"/>
+                                                    <field name="border_left" style="width: 25mm" />
+                                                    <field name="border_left_size" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_left_unit" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_left_style" style="width: 25mm" /><label string=" - "/>
+                                                    <field name="border_left_color" style="width: 25mm" />
+                                                </div>
+                                                <div class="oe_inline">
+                                                    <label for="border_right" style="width: 25mm"/>
+                                                    <field name="border_right" style="width: 25mm" />
+                                                    <field name="border_right_size" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_right_unit" style="width: 15mm" /><label string=" - "/>
+                                                    <field name="border_right_style" style="width: 25mm" /><label string=" - "/>
+                                                    <field name="border_right_color" style="width: 25mm" />
+                                                </div>
+                                            </page>
+                                            <!-- <page string='image' attrs="{'invisible': [('arguments', '!=', 'image')]}">
+                                                <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium"}'/>
+                                            </page> -->
+                                            <page string='Date Format Help' attrs="{'invisible': [('argument_type', '!=', 'date')]}">
+                                                <group string="Legends for supported Date and Time Formats">
+                                                    <div>%%a - Abbreviated weekday name.</div>
+                                                    <div>%%A - Full weekday name.</div>
+                                                    <div>%%b - Abbreviated month name.</div>
+                                                    <div>%%B - Full month name."</div>
+                                                    <div>%%d - Day of the month [01,31]."</div>
+                                                    <div>%%j - Day of the year [001,366]."</div>
+                                                    <div>%%H - Hour (24-hour clock) [00,23]."</div>
+                                                    <div>%%I - Hour (12-hour clock) [01,12]."</div>
+                                                    <div>%%M - Minute [00,59]."</div>
+                                                    <div>%%p - Equivalent of either AM or PM."</div>
+                                                    <div>%%S - Seconds [00,61]."</div>
+                                                    <div>%%w - Weekday number [0(Sunday),6]."</div>
+                                                    <div>%%y - Year without century [00,99]."</div>
+                                                    <div>%%Y - Year with century."</div>
+                                                    <div>%%m - Month number [01,12]."</div>
+                                                </group>
+                                                <group string="Examples">
+                                                    <div>1. %%b, %%B         ==> Dec, December</div>
+                                                    <div>2. %%a ,%%A         ==> Fri, Friday</div>
+                                                    <div>3. %%y, %%Y         ==> 08, 2008</div>
+                                                    <div>4. %%d, %%m         ==> 05, 12</div>
+                                                    <div>5. %%H:%%M:%%S      ==> 18:25:20</div>
+                                                    <div>6. %%I:%%M:%%S %%p  ==> 06:25:20 PM</div>
+                                                    <div>7. %%j              ==> 340</div>
+                                                    <div>8. %%S              ==> 20</div>
+                                                    <div>9. %%w              ==> 5 ( Friday is the 6th day)</div>
+                                                </group>
+                                            </page>
+                                        </notebook>
+                                        
+                                    </form>
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="arguments"/>
+                                        <field name="other_field"/>
+                                        <field name="other_text"/>
+                                        <field name="top_margin"/>
+                                        <field name="top_unit"/>
+                                        <field name="left_margin"/>
+                                        <field name="left_unit"/>
+                                        <field name="font_size"/>
+                                        <field name="font_unit"/>
+                                        <field name="height"/>
+                                        <field name="height_unit"/>
+                                        <field name="prefix"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Copies">
+                                <field name="copies_line_ids" context="{'format_id': id, 'main_model': main_model}">
+                                    <tree string="Format Copies" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="description"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="format_print_main_models_form_view" model="ir.ui.view">
+            <field name="name">VITT Format Print Main Models Form</field>
+            <field name="model">format.print.main_models</field>
+            <field name="arch" type="xml">
+                <form string="Main Model">
+                    <sheet>
+                        <group colspan='2'>
+                            <group>
+                                <field name="model_name"/>
+                            </group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Child Models">
+                                <field name="child_models_ids">
+                                    <tree string="Child Models" editable="bottom">
+                                        <field name="model_name"/>
+                                        <field name="name"/>
+                                        <field name="is_matrix"/>
+                                        <field name="matrix_field"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_menu_formats_print" model="ir.actions.act_window">
+            <field name="name">Formats Print</field>
+            <field name="res_model">format.print</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_menu_formats_print_main_models" model="ir.actions.act_window">
+            <field name="name">Formats Print - Main Models</field>
+            <field name="res_model">format.print.main_models</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menuitem_formats_print_parent"
+            action="action_menu_formats_print" parent="account.menu_finance_configuration" />
+        <menuitem id="menuitem_formats_print"
+            action="action_menu_formats_print" parent="vitt_format_print.menuitem_formats_print_parent" />
+        <menuitem id="menuitem_formats_print_main_model"
+            action="action_menu_formats_print_main_models" parent="vitt_format_print.menuitem_formats_print_parent" />
+
+    </data>
+</odoo>

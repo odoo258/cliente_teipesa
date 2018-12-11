@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="PosTicket">
+        <t t-jquery="tr[class='emph']" t-operation="after">
+
+            <tr>
+                <td colspan="2">
+                    <strong>Amount in text:</strong>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="pos-left-align">
+                    <t t-esc="order.get_total_amount_in_text()"/>
+                </td>
+            </tr>
+
+        </t>
+    </t>
+</templates>

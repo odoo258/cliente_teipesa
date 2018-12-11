@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+# For copyright and license notices, see __manifest__.py file in module root
+# directory
+##############################################################################
+-->
+<openerp>
+    <data>
+        <!--inherits the default order report and override its details -->       
+        <report 
+            id="account_invoices_copies"
+            model="account.invoice"
+            string="Invoices and copies"
+            report_type="qweb-pdf"
+            name="vitt_account_invoice_copies.report_invoice"
+            file="vitt_account_invoice_copies.report_invoice"
+            attachment_use="False"
+            attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+            groups="vitt_account_invoice_copies.account_report_invoice_copies"
+        />        
+    </data>
+</openerp>
+

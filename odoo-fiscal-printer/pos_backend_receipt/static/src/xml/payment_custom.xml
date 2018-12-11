@@ -1,0 +1,28 @@
+<templates>
+    <t t-extend="PaymentScreenWidget">
+        <t t-jquery=".top-content" t-operation="replace">
+            <div class='top-content'>
+                <span class='button back'>
+                    <i class='fa fa-angle-double-left'></i>
+                    Back
+                </span>
+                <h1 style="margin-right:50%;">Payment</h1>
+                <div>
+                    <span class='button to_cancel' id="auto_cancel" style="margin-left:-2%;">
+                        Auto Cancel
+                    </span>
+                    <span class='button report_z' id="report_z" style="margin-left:13%;">
+                        Report Z
+                    </span>
+                    <span class='button report_x' id="report_x" style="margin-left:25%;">
+                        Report X
+                    </span>
+                </div> 
+                <span class='button next'>
+                    Validate
+                    <i class='fa fa-angle-double-right'></i>
+                </span>
+            </div>
+        </t>
+    </t>
+</templates>

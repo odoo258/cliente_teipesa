@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <template id="report_move">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <!-- HEADER -->
+                        <h2><span t-field="o.name"/></h2>
+                        <div class="row mt32 mb32">
+                          <div class="col-xs-6">
+
+                            <table style="width:100%">
+                                <tr>
+                                    <td><strong>Journal</strong></td>
+                                    <td class="text-left">
+                                        <span t-field="o.journal_id"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Partner</strong></td>
+                                    <td class="text-left">
+                                        <span t-field="o.partner_id"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><strong>State</strong></td>
+                                    <td class="text-left">
+                                        <span t-field="o.state"/>
+                                    </td>
+                                </tr>
+                            </table>
+                          </div>
+                          <div class="col-xs-6">
+                            <table style="width:100%">
+                                <tr>
+                                    <td><strong>Date </strong></td>
+                                    <td class="text-left">
+                                        <span t-field="o.date"/>
+                                    </td>
+                                <tr>
+                                </tr>
+                                    <td><strong>Reference </strong></td>
+                                    <td class="text-left">
+                                        <span t-field="o.ref"/>
+                                    </td>
+                                </tr>
+                            </table>
+                          </div>
+                        </div>
+
+                        <!-- LINES -->
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    
+                                    <th>Account</th>
+                                    <th>Partner</th>
+                                    <th>Label</th>
+                                    <th>Analytic Account</th>
+                                    <th class="text-right" style="width:150px;">Amount Currency</th>
+                                    <th class="text-right" style="width:120px;">Debit</th>
+                                    <th class="text-right" style="width:120px;">Credit</th>
+                                </tr>
+                            </thead>
+                            <tbody class="invoice_tbody">
+                                <tr t-foreach="o.line_ids" t-as="l">
+                                    <td><span t-field="l.account_id"/></td>
+                                    <td><span t-field="l.partner_id"/></td>
+                                    <td><span t-field="l.name"/></td>
+                                    <td><span t-field="l.analytic_account_id"/></td>
+                                    
+                                    <td class="text-right" style="width:120px;">
+                                        <t t-if="l.amount_currency" >
+                                            <span t-field="l.amount_currency"/>
+                                        </t>
+                                    </td>
+                                        
+                                    <td class="text-right" style="width:120px;">
+                                        <t t-if="l.debit" >
+                                            <span t-field="l.debit"/>
+                                        </t>
+                                    </td>
+                                    
+                                    <td class="text-right" style="width:120px;">
+                                        <t t-if="l.credit">
+                                            <span t-field="l.credit"/>
+                                        </t>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td/>
+                                    <td/>
+                                    <td/>
+                                    <td/>
+                                    <td/>
+                                    <td class="text-right"><strong><span t-field="o.amount"/></strong></td>
+                                    <td class="text-right"><strong><span t-field="o.amount"/></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <span t-esc="to_word(123098)"/>                   -->
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</data>
+</odoo>

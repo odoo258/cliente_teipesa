@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="PosTicket">
+        <!-- <t t-jquery=".pos-center-align t:first" t-operation="after">
+            <br/>
+                <t t-esc="order.get('sequence_ref')"/>
+            <br/>
+        </t> -->
+        <!-- <t t-jquery="[t-esc='widget.pos.company.name']" t-operation="after"> -->
+        <t t-jquery="[t-if='receipt.header']" t-operation="before">
+            <div style='text-align:center' >
+                <strong>Invoice</strong><br />
+                <t t-esc="order.get('sequence_ref')"/><br/>
+                Date: <t t-esc="moment().format('L LT')"/>
+            </div>
+            <t t-if="order.get('vitt_min_value')">
+                <br/>Minimo: <t t-esc="order.get('vitt_min_value')"/>
+            </t>
+            <t t-if="order.get('vitt_max_value')">
+                <br/>Maximo: <t t-esc="order.get('vitt_max_value')"/>
+            </t>
+            <t t-if="order.get('expiration_date')">
+                <br/>Fecha Exp.: <t t-esc="order.get('expiration_date')"/>
+            </t>
+            <t t-if="order.get('fiscal_sequence_regime_ids')">
+                <br/>Fiscal Regimen: <t t-esc="order.get('fiscal_sequence_regime_ids')"/>
+            </t>            
+            <t t-if="order.get('authorization_code')">
+                <br/> <t t-esc="order.get('ac_code_type')"/>:<t t-esc="order.get('authorization_code')"/>
+            </t>
+            <br />
+        </t>
+
+    </t>
+
+    <t t-extend="XmlReceipt">
+        <!-- <t t-jquery="[t-if='!receipt.company.logo']" t-operation="after">
+            <br/>
+                <t t-esc="receipt.sequence_ref"/>
+            <br/> 
+        </t> -->
+        <t t-jquery="[t-if='receipt.header']" t-operation="before">
+            <div style='text-align:center' >
+                <strong>Invoice</strong><br />
+                <t t-esc="order.get('sequence_ref')"/><br/>
+                Date: <t t-esc="moment().format('L LT')"/>
+            </div>
+            <t t-if="order.get('vitt_min_value')">
+                <br/>Minimo: <t t-esc="order.get('vitt_min_value')"/>
+            </t>
+            <t t-if="order.get('vitt_max_value')">
+                <br/>Maximo: <t t-esc="order.get('vitt_max_value')"/>
+            </t>
+            <t t-if="order.get('expiration_date')">
+                <br/>Fecha Exp.: <t t-esc="order.get('expiration_date')"/>
+            </t>
+            <t t-if="order.get('fiscal_sequence_regime_ids')">
+                <br/>Fiscal Regimen: <t t-esc="order.get('fiscal_sequence_regime_ids')"/>
+            </t>            
+            <t t-if="order.get('authorization_code')">
+                <br/> <t t-esc="order.get('ac_code_type')"/>:<t t-esc="order.get('authorization_code')"/>
+            </t>
+            <br />
+        </t>
+    </t>
+
+</templates>

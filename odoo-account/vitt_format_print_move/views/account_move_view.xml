@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="vitt_view_account_move_form_inherit" model="ir.ui.view">
+            <field name="name">account.move.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header/field[@name='state']" position="before">
+                    <button name="%(vitt_format_print.action_format_print)d" class="oe_highlight" string="Print Move" type="action" 
+                        context="{'state': state}"
+                    />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

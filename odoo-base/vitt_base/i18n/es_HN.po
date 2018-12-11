@@ -1,0 +1,622 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* vitt_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-11 20:54+0000\n"
+"PO-Revision-Date: 2017-01-11 20:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_HN\n"
+"X-Generator: Poedit 1.8.11\n"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "<strong>Date </strong>"
+msgstr "<strong>Fecha </strong>"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "<strong>Journal</strong>"
+msgstr "<strong>Diario</strong>"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "<strong>Partner</strong>"
+msgstr "<strong>Cliente</strong>"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "<strong>Reference </strong>"
+msgstr "<strong>Referencia </strong>"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "<strong>State</strong>"
+msgstr "<strong>Estado</strong>"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_account_payable
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_partner_category_account_payable
+msgid "Account Payable"
+msgstr "Cuentas A Pagar"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_account_receivable
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_partner_category_account_receivable
+msgid "Account Receivable"
+msgstr "Cuenta A Cobrar"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_birthdate
+#: model:ir.model.fields,help:vitt_base.field_res_partner_birthdate
+msgid "Birthdate"
+msgstr "Birthdate"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_partner_category_name
+msgid "Category Name"
+msgstr "Nombre Categoría"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_civil_status
+#: model:ir.model.fields,help:vitt_base.field_res_partner_civil_status
+msgid "Civil Status"
+msgstr "Estado civil"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_create_uid
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_create_uid
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_create_uid
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_create_date
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_create_date
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_create_date
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "Credit"
+msgstr "Haber"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_customer
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_res_partner_days_credit_limit
+msgid "Customer Days Credit Limit"
+msgstr "Días de límite de crédito"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_res_partner_days_purchase_limit
+msgid "Customer Days Purchase Limit"
+msgstr "Días de límite de compra"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_document_type
+#: model:ir.model.fields,help:vitt_base.field_res_partner_document_type
+msgid "Customer Document Type"
+msgstr "Tipo de documento"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Customer Invoices"
+msgstr "Facturas de Cliente"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_partner_name_audit
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_partner_name_audit
+msgid "Customer Name Audit"
+msgstr "Nombre Cliente - Auditoria"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_res_partner_purchase_limit
+msgid "Customer Purchase Limit"
+msgstr "Límite de compra"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_days_credit_limit
+msgid "Days Credit Limit"
+msgstr "Días límite de crédito"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_days_purchase_limit
+msgid "Days Purchase Limit"
+msgstr "Días límite de compra"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "Debit"
+msgstr "Debe"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_description
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_display_name
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_display_name
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_display_name
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_base
+#: selection:res.partner,civil_status:0
+msgid "Divorced"
+msgstr "Divorciado"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_document_number
+#: model:ir.model.fields,help:vitt_base.field_res_partner_document_number
+msgid "Document Number"
+msgstr "Número de documento"
+
+#. module: vitt_base
+#: selection:res.partner,document_type:0
+msgid "Driving license"
+msgstr "Licencia de conducir"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Enable partner extra info"
+msgstr "Habilitar Información Extra de Contacto"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Enable product cost"
+msgstr "Habilitar Costo Producto"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Enable product margin"
+msgstr "Habilitar Margen de Producto"
+
+#. module: vitt_base
+#: code:addons/vitt_base/models/res_partner.py:41
+#, python-format
+msgid "Error! VAT Number already exists"
+msgstr "Error! RTN Ya ha sido Registrado"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.res_partner_form_extra_info
+msgid "Extra Info"
+msgstr "Información extra"
+
+#. module: vitt_base
+#: selection:res.partner,gender:0
+msgid "Female"
+msgstr "Femenino"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_gender
+#: model:ir.model.fields,help:vitt_base.field_res_partner_gender
+msgid "Gender"
+msgstr "Género"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_id
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_id
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_id
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_id
+#: selection:res.partner,document_type:0
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linea de Factura"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_company_invoice_manual_seq
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_invoice_manual_seq
+msgid "Invoice Manual Secuence"
+msgstr "Sequencia Fiscal en Factura"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_invoice_product_cost
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_line_invoice_product_cost
+#: model:ir.model.fields,field_description:vitt_base.field_res_company_invoice_product_cost
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_invoice_product_cost
+msgid "Invoice Product Cost"
+msgstr "Costo de Producto en Factura"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_line_invoice_product_margin
+#: model:ir.model.fields,field_description:vitt_base.field_res_company_invoice_product_margin
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_invoice_product_margin
+msgid "Invoice Product margin"
+msgstr "Margen de Producto en Factura"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_margin
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_margin
+msgid "Invoice Total Margin"
+msgstr "Margen Total en Factura"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+msgid "Label"
+msgstr "Etiqueta"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings___last_update
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type___last_update
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category___last_update
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_write_uid
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_write_uid
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_write_uid
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_write_date
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_write_date
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_write_date
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_base
+#: selection:res.partner,gender:0
+msgid "Male"
+msgstr "Masculino"
+
+#. module: vitt_base
+#: selection:res.partner,civil_status:0
+msgid "Married"
+msgstr "Casado(a)"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_order_type_name
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_name
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_profession_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_nationality
+#: model:ir.model.fields,help:vitt_base.field_res_partner_nationality
+msgid "Nationality"
+msgstr "Nacionalidad"
+
+#. module: vitt_base
+#: sql_constraint:vitt_base.order_type:0
+msgid "Only a unique Order Type is permitted!"
+msgstr "Solo un Tipo de Orden es Permitido!"
+
+#. module: vitt_base
+#: sql_constraint:vitt_base.profession:0
+msgid "Only a unique Profession is permitted!"
+msgstr "Solo se permite una única profesión!"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_order_type_name
+msgid "Order Name"
+msgstr "Nombre de Orden"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_sale_order_order_type
+#: model:ir.model.fields,help:vitt_base.field_sale_order_order_type
+msgid "Order Type"
+msgstr "Tipo de Orden"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_order_type_description
+msgid "Order description"
+msgstr "Descripción de la Orden"
+
+#. module: vitt_base
+#: selection:res.partner,civil_status:0
+#: selection:res.partner,gender:0
+msgid "Other"
+msgstr "Otros"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_other_company_reg
+#: model:ir.ui.view,arch_db:vitt_base.res_partner_form_extra_info
+msgid "Other Company Registry"
+msgstr "Otro Registro de Compañía"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_res_partner_other_company_reg
+msgid "Other Company Registry for some countries"
+msgstr "Otro Registro de Compañía para algunos países"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_res_partner
+#: model:ir.ui.view,arch_db:vitt_base.report_move
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_partner_category
+#: model:ir.model.fields,help:vitt_base.field_res_partner_partner_category
+msgid "Partner Category"
+msgstr "Categoría de Contacto"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_company_partner_extrainfo
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_partner_extrainfo
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_partner_extrainfo
+msgid "Partner Extra Info"
+msgstr "Información Extra de Contacto"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_partner_category_customer
+msgid "Partner Validation if is Customer"
+msgstr "Válida si el contacto es Cliente"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_partner_category_supplier
+msgid "Partner Validation if is Supplier"
+msgstr "Válida si el contacto es Proveedor"
+
+#. module: vitt_base
+#: selection:res.partner,document_type:0
+msgid "Passport"
+msgstr "Pasaporte"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_place_birth
+#: model:ir.model.fields,help:vitt_base.field_res_partner_place_birth
+msgid "Place of Birth"
+msgstr "Lugar de nacimiento"
+
+#. module: vitt_base
+#: model:ir.actions.report.xml,name:vitt_base.report_account_move
+msgid "Print Move"
+msgstr "Movimiento de impresión"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_line_cost
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_line_cost
+msgid "Product Cost"
+msgstr "Costo de Producto"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_line_cost_total
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_line_cost_total
+msgid "Product Cost Total"
+msgstr "Costo de Producto Total"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_line_margin
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_line_margin
+msgid "Product Margin"
+msgstr "Margen de Producto"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_product_pricelist
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_partner_category_product_pricelist
+msgid "Product PriceList"
+msgstr "Lista de Precio"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_profession
+#: model:ir.model.fields,help:vitt_base.field_res_partner_profession
+msgid "Profession"
+msgstr "Profesión"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_profession_name
+msgid "Profession Name"
+msgstr "Nombre de profesión"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_profession_description
+msgid "Profession description"
+msgstr "Descripción de profesión"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.res_partner_form_extra_info
+msgid "Profile"
+msgstr "Perfil"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_purchase_limit
+msgid "Purchase Limit"
+msgstr "Límite de compra"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_rate
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_rate
+msgid "Rate"
+msgstr "Tasa"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_company_sales_order_type
+#: model:ir.model.fields,field_description:vitt_base.field_sale_order_sales_order_type
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_sales_order_type
+msgid "Sales Order Type"
+msgstr "Tipo de Orden de Venta"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Sales Orders"
+msgstr "Ordenes de Ventas"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.account_settings_form
+#: model:ir.ui.view,arch_db:vitt_base.sale_settings_form
+msgid "Settings"
+msgstr "Configuración"
+
+#. module: vitt_base
+#: selection:res.partner,civil_status:0
+msgid "Single"
+msgstr "Soltero(a)"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_partner_category_supplier
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_account_invoice_vat
+msgid "TIN"
+msgstr "RTN"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_vat
+msgid "Tax Identification Number. Used by the some of the legal statements."
+msgstr "Número de identificación fiscal. Utilizado por algunas de las declaraciones legales."
+
+#. module: vitt_base
+#: model:ir.model.fields,field_description:vitt_base.field_res_company_partner_unique_vat
+#: model:ir.model.fields,field_description:vitt_base.field_res_partner_partner_unique_vat
+#: model:ir.model.fields,field_description:vitt_base.field_vitt_base_config_settings_partner_unique_vat
+#: model:ir.model.fields,help:vitt_base.field_res_company_partner_unique_vat
+#: model:ir.model.fields,help:vitt_base.field_res_partner_partner_unique_vat
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_config_settings_partner_unique_vat
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Unique Partner by VAT"
+msgstr "RTN Unico por Empresa"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "Use sales order type"
+msgstr "Usar Tipo Orden de Venta"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.account_settings_form
+#: model:ir.ui.view,arch_db:vitt_base.sale_settings_form
+msgid "VITT"
+msgstr "VITT"
+
+#. module: vitt_base
+#: model:ir.ui.view,arch_db:vitt_base.account_settings_form
+#: model:ir.ui.view,arch_db:vitt_base.sale_settings_form
+#: model:ir.ui.view,arch_db:vitt_base.vitt_base_settings_view
+msgid "VITT Settings"
+msgstr "VITT Settings"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_account_config_settings
+msgid "account.config.settings"
+msgstr "account.config.settings"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_config_settings_company_id
+msgid "code of company"
+msgstr "código de la compañía"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_res_company_invoice_manual_seq
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_config_settings_invoice_manual_seq
+msgid "invoice manual secuence"
+msgstr "Sequencia Manual Fiscal en Factura"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_invoice_product_cost
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_line_invoice_product_cost
+#: model:ir.model.fields,help:vitt_base.field_res_company_invoice_product_cost
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_config_settings_invoice_product_cost
+msgid "invoice product Cost"
+msgstr "Costo de Producto en Factura"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_account_invoice_line_invoice_product_margin
+#: model:ir.model.fields,help:vitt_base.field_res_company_invoice_product_margin
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_config_settings_invoice_product_margin
+msgid "invoice product margin"
+msgstr "Margen de Producto en Factura"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_res_company_partner_extrainfo
+#: model:ir.model.fields,help:vitt_base.field_res_partner_partner_extrainfo
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_config_settings_partner_extrainfo
+msgid "partner extra info"
+msgstr "Información Extra de Contacto"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_sale_config_settings
+msgid "sale.config.settings"
+msgstr "sale.config.settings"
+
+#. module: vitt_base
+#: model:ir.model.fields,help:vitt_base.field_res_company_sales_order_type
+#: model:ir.model.fields,help:vitt_base.field_sale_order_sales_order_type
+#: model:ir.model.fields,help:vitt_base.field_vitt_base_config_settings_sales_order_type
+msgid "sales order type"
+msgstr "Tipo de Orden de Venta"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_vitt_base_config_settings
+msgid "vitt_base.config_settings"
+msgstr "vitt_base.config_settings"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_vitt_base_order_type
+msgid "vitt_base.order_type"
+msgstr "vitt_base.order_type"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_vitt_base_partner_category
+msgid "vitt_base.partner_category"
+msgstr "vitt_base.partner_category"
+
+#. module: vitt_base
+#: model:ir.model,name:vitt_base.model_vitt_base_profession
+msgid "vitt_base.profession"
+msgstr "vitt_base.profession"
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+        <record id="main_account_payment" model="format.print.main_models" >
+            <field name="model_name">account.payment</field>
+            <field name="name">Account - Payment</field>
+        </record>
+        <record id="child_account_payment_payment" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_payment"/>
+            <field name="model_name">account.payment</field>
+            <field name="name">Account - Payment</field>
+        </record>
+        <record id="child_account_payment_move_line" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_payment"/>
+            <field name="model_name">account.move.line</field>
+            <field name="is_matrix">1</field>
+            <field name="name">Account - Move Lines</field>
+        </record>
+    </data>
+</odoo>

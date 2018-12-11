@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_fiscal_seq_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 17:14+0000\n"
+"PO-Revision-Date: 2017-04-03 11:17-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_HN\n"
+"X-Generator: Poedit 1.8.12\n"
+
+#. module: vitt_fiscal_seq_stock
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_stock.field_stock_picking_fiscal_control
+msgid "Fiscal Control"
+msgstr "Control Fiscal"
+
+#. module: vitt_fiscal_seq_stock
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_stock.field_stock_picking_fiscal_number
+#: model:ir.model.fields,help:vitt_fiscal_seq_stock.field_stock_picking_fiscal_number
+msgid "Fiscal Number"
+msgstr "Número Fiscal"
+
+#. module: vitt_fiscal_seq_stock
+#: model:ir.model.fields,field_description:vitt_fiscal_seq_stock.field_stock_picking_fiscal_secuence
+#: model:ir.model.fields,help:vitt_fiscal_seq_stock.field_stock_picking_fiscal_secuence
+msgid "Fiscal Secuence"
+msgstr "Secuencia Fiscal"
+
+#. module: vitt_fiscal_seq_stock
+#: model:ir.model.fields,help:vitt_fiscal_seq_stock.field_stock_picking_fiscal_control
+msgid "If the inventory move is Fiscal"
+msgstr "Si el movimiento de stock es Fiscal"
+
+#. module: vitt_fiscal_seq_stock
+#: model:ir.model,name:vitt_fiscal_seq_stock.model_vitt_fiscal_seq_journal_settings
+msgid "Journal Settings"
+msgstr "Configuración de Diarios"
+
+#. module: vitt_fiscal_seq_stock
+#: code:addons/vitt_fiscal_seq_stock/models/stock.py:92
+#, python-format
+msgid "The Number %s is not allowed in this sequence"
+msgstr "El Número %s no es permitido en esta secuencia"
+
+#. module: vitt_fiscal_seq_stock
+#: code:addons/vitt_fiscal_seq_stock/models/stock.py:85
+#, python-format
+msgid "The date %s is not allowed in this sequence"
+msgstr "La Fecha %s no es permitada en esta secuencia"
+
+#. module: vitt_fiscal_seq_stock
+#: model:ir.model,name:vitt_fiscal_seq_stock.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"

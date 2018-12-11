@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="journal_summary_report"
+            model="account.move.line"
+            string="Reporte de Asientos Resumen"
+            report_type="qweb-pdf"
+            name="vitt_journal_summary.journalsummary"
+            file="vitt_journal_summary.journalsummary"
+            menu="False"
+        />
+
+        <record id="action_account_journal_wiz" model="ir.actions.act_window">
+            <field name="name">Journal Report Summary</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">journal.account.wiz</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="journal_account_wiz_form" model="ir.ui.view">
+            <field name="model">journal.account.wiz</field>
+            <field name="name">journal.account.wiz.form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group name="main">
+                        <group name="left">
+                            <field name="date_from" />
+                            <field name="date_to" />
+                            <field name="legal_no" />
+                            <field name="sort_by" />
+                        </group>
+                        <group name="right">
+                            <field name="cust_inv" />
+                            <field name="vend_inv" />
+                            <field name="payments" />
+                            <field name="receipts" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Ejecutar" name="ex_journalsummary" type="object" class="oe_highlight"/>
+                        <button name="Print_to_excel" string="Print Excel" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <menuitem
+            name="ARG Legal Statements"
+            id="legal_statements"
+            parent="account.menu_finance_reports"
+        />
+
+        <menuitem
+            name="Journal Report Summary"
+            id="journal_summary"
+            action="action_account_journal_wiz"
+            parent="legal_statements"
+        />
+
+    </data>
+</odoo>

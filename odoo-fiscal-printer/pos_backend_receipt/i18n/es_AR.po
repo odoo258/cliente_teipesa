@@ -1,0 +1,209 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_backend_receipt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-26 14:01+0000\n"
+"PO-Revision-Date: 2017-07-26 11:30-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.res_users_form_view1
+msgid "/dev/ttyUSB0"
+msgstr "/dev/ttyUSB0"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.res_users_form_view1
+msgid "0.0.0.0:8069"
+msgstr "0.0.0.0:8069"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/pos_backend_receipt.xml:46
+#, python-format
+msgid "Address:"
+msgstr "Dirección:"
+
+#. module: pos_backend_receipt
+#: selection:res.users,printer_config:0
+msgid "Argentina"
+msgstr "Argentina"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/payment_custom.xml:11
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_inherite_form
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_supplier_inherit_form
+#, python-format
+msgid "Auto Cancel"
+msgstr "Cancel. Ticket"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/payment_custom.xml:6
+#, python-format
+msgid "Back"
+msgstr "Regresar"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/pos_backend_receipt.xml:11
+#, python-format
+msgid "Booking Number :"
+msgstr "Número Reserva :"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/pos_backend_receipt.xml:19
+#, python-format
+msgid "Check In :"
+msgstr "Check In :"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/pos_backend_receipt.xml:25
+#, python-format
+msgid "Check Out :"
+msgstr "Check Out :"
+
+#. module: pos_backend_receipt
+#: selection:res.users,printer_config:0
+msgid "Chile"
+msgstr "Chile"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/pos_backend_receipt.xml:33
+#, python-format
+msgid "Customer:"
+msgstr "Cliente:"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/pos_backend_receipt.xml:70
+#, python-format
+msgid "Discount:"
+msgstr "Descuento:"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.res_users_form_view1
+msgid "Fiscal Printer"
+msgstr "Impresora Fiscal"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.res_users_form_view1
+msgid "Fiscal Printer Details"
+msgstr "Detalles Imp. Fiscal"
+
+#. module: pos_backend_receipt
+#: model:ir.model.fields,field_description:pos_backend_receipt.field_account_invoice_isValidateFiscal
+msgid "FiscalValidate"
+msgstr "Validación Fiscal"
+
+#. module: pos_backend_receipt
+#: model:ir.model.fields,field_description:pos_backend_receipt.field_res_users_ip_address
+msgid "IP address"
+msgstr "Dirección IP"
+
+#. module: pos_backend_receipt
+#: model:ir.model,name:pos_backend_receipt.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.res_users_form_view1
+msgid "POSBOX FISCAL"
+msgstr "POSBOX FISCAL"
+
+#. module: pos_backend_receipt
+#: selection:res.users,printer_config:0
+msgid "Panama"
+msgstr "Panama"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/payment_custom.xml:9
+#, python-format
+msgid "Payment"
+msgstr "Pago"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/pos_backend_receipt.xml:39
+#, python-format
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_inherite_form
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_supplier_inherit_form
+msgid "Print Fiscal Receipt"
+msgstr "Imprimir Ticket Fiscal"
+
+#. module: pos_backend_receipt
+#: model:ir.model.fields,field_description:pos_backend_receipt.field_res_users_printer_config
+msgid "Printer Country"
+msgstr "País de Impresora"
+
+#. module: pos_backend_receipt
+#: model:ir.model.fields,field_description:pos_backend_receipt.field_res_users_printer_model
+msgid "Printer Model"
+msgstr "Modelo Impresora"
+
+#. module: pos_backend_receipt
+#: model:ir.model.fields,field_description:pos_backend_receipt.field_res_users_printer_port
+msgid "Printer Port"
+msgstr "Puerto Impresora"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_inherite_form
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_supplier_inherit_form
+msgid "Receipt X"
+msgstr "Reporte X"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_inherite_form
+#: model:ir.ui.view,arch_db:pos_backend_receipt.account_invoice_supplier_inherit_form
+msgid "Receipt z"
+msgstr "Reporte Z"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/payment_custom.xml:17
+#, python-format
+msgid "Report X"
+msgstr "Reporte X"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/payment_custom.xml:14
+#, python-format
+msgid "Report Z"
+msgstr "Reporte Z"
+
+#. module: pos_backend_receipt
+#: model:ir.model,name:pos_backend_receipt.model_res_users
+msgid "Users"
+msgstr "Usuarios"
+
+#. module: pos_backend_receipt
+#. openerp-web
+#: code:addons/pos_backend_receipt/static/src/xml/payment_custom.xml:21
+#, python-format
+msgid "Validate"
+msgstr "Validar"
+
+#. module: pos_backend_receipt
+#: model:ir.ui.view,arch_db:pos_backend_receipt.res_users_form_view1
+msgid "tm-220-af"
+msgstr "tm-220-af"

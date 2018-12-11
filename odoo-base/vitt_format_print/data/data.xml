@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+        <record id="main_no_model" model="format.print.main_models" >
+            <field name="model_name">no_models</field>
+            <field name="name">No Model</field>
+        </record>
+
+        <record id="child_no_model" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_no_model"/>
+            <field name="model_name">no_model</field>
+            <field name="name">No child Model</field>
+        </record>
+    </data>
+</odoo>

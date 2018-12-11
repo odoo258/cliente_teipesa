@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+        <record id="main_account_move" model="format.print.main_models" >
+            <field name="model_name">account.move</field>
+            <field name="name">Account - Move</field>
+        </record>
+
+        <record id="child_account_move" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_move"/>
+            <field name="model_name">account.move</field>
+            <field name="name">Account - Move</field>
+        </record>
+        <record id="child_account_move_line" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_move"/>
+            <field name="model_name">account.move.line</field>
+            <field name="name">Account - Move Line</field>
+            <field name="is_matrix">1</field>
+            <field name="matrix_field">line_ids</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_move_accounting_agile
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-01 22:53+0000\n"
+"PO-Revision-Date: 2017-11-01 16:55-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_HN\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model,name:vitt_move_accounting_agile.model_account_move
+msgid "Account Entry"
+msgstr "Entrada contable"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model.fields,field_description:vitt_move_accounting_agile.field_account_move_t_credit
+msgid "Credit Total"
+msgstr "Total Haber"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model.fields,field_description:vitt_move_accounting_agile.field_account_move_t_debit
+msgid "Debit Total"
+msgstr "Total Debe"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model.fields,field_description:vitt_move_accounting_agile.field_account_move_line_do_balance
+msgid "Do balance"
+msgstr "Equilibrar"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model,name:vitt_move_accounting_agile.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model.fields,field_description:vitt_move_accounting_agile.field_account_move_line_rate
+msgid "Rate"
+msgstr "Tasa"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model.fields,field_description:vitt_move_accounting_agile.field_account_move_unbalanced_diff
+msgid "Unbalanced Diff"
+msgstr "Diferencia Desequilibrada"
+
+#. module: vitt_move_accounting_agile
+#: model:ir.model.fields,field_description:vitt_move_accounting_agile.field_account_move_unbalanced_flag
+msgid "Unbalanced Flag"
+msgstr "Desequilibrado"

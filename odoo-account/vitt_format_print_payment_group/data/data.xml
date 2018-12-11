@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+        <record id="main_account_payment_group" model="format.print.main_models" >
+            <field name="model_name">account.payment.group</field>
+            <field name="name">Account Payment Group</field>
+        </record>
+        <record id="child_account_payment_payment2" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_payment_group"/>
+            <field name="model_name">account.payment.group</field>
+            <field name="name">Account Payment Group</field>
+        </record>
+        <record id="child_account_payment_payment_group" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_payment_group"/>
+            <field name="model_name">account.payment</field>
+            <field name="is_matrix">1</field>
+            <field name="name">Account - Payment Lines</field>
+            <field name="matrix_field">payment_ids</field>
+        </record>
+        <record id="child_account_payment_group_move_line" model="format.print.child_models" >
+            <field name="main_model_id" ref="main_account_payment_group"/>
+            <field name="model_name">account.move.line</field>
+            <field name="is_matrix">1</field>
+            <field name="name">Account - Move Lines</field>
+            <field name="matrix_field">move_line_ids</field>
+        </record>
+    </data>
+</odoo>

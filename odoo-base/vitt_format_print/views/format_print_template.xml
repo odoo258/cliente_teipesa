@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="format_print_template_document">
+            <t t-foreach="doc_ids" t-as="doc_id">
+                <div class="page" name='main_page'>
+                    <t t-set="line_pos" t-value="1.0"/>
+                    <t t-foreach="arguments_lines" t-as="arg_line">
+                        <t t-set="style" t-value="get_style(data['form'],arg_line.id, line_pos)" />
+                        <!--
+                            Print Main Model (HEADER)
+                        -->
+                        <t t-if="arg_line.from_model == arg_line.main_model" >
+                            <t t-if="arg_line.arguments != 'image'"> <!-- regular fields -->
+                                <span t-esc="get_value(data['form'], doc_id.id, arg_line.id)" t-att-style="style"/>
+                            </t>
+                            <t t-if="arg_line.arguments == 'image' and arg_line.image_field" >  <!-- image fields -->
+                              <img t-attf-src="data:image/png;base64, #{get_value(data['form'], doc_id.id, arg_line.id)}" t-att-style="style" />
+                            </t>
+                            <t t-if="arg_line.arguments == 'image' and arg_line.image" > 
+                              <span t-field="arg_line.image" t-field-options='{"widget": "image"}' t-att-style="style"/> <!-- attached image -->
+                            </t>
+                        </t>
+                        <t t-if="arg_line.arguments == 'copy'">
+                            <!-- <span t-esc="get_value(data['form'], copy_id, arg_line.id)" t-att-style="style"/> -->
+                            <span t-esc="copy_desc" t-att-style="style"/>
+                        </t>
+                        <!--
+                            Print model Rows (one2many fields)
+                        -->
+                        <t t-set="line_pos" t-value="1.0"/>
+                        <t t-if="arg_line.matrix_field and arg_line.is_matrix">
+                            <t t-foreach="doc_id[arg_line.matrix_field]" t-as="reg_line">
+                                <t t-set="style" t-value="get_style(data['form'],arg_line.id, line_pos)" />
+                                <t t-set="line_pos" t-value="line_pos+1"/>
+                                <t t-if="arg_line.arguments != 'image'"> <!-- regular fields -->
+                                    <span t-esc="get_value(data['form'], reg_line.id, arg_line.id)" t-att-style="style"/>
+                                </t>
+                                <t t-if="arg_line.arguments == 'image' and arg_line.image_field" >  <!-- image fields -->
+                                  <img t-attf-src="data:image/png;base64, #{get_value(data['form'], reg_line.id, arg_line.id)}" t-att-style="style" />
+                                </t>
+                                <t t-if="arg_line.arguments == 'image' and arg_line.image" > 
+                                  <span t-field="arg_line.image" t-field-options='{"widget": "image"}' t-att-style="style"/> <!-- attached image -->
+                                </t>
+                            </t> <!-- for reg_line -->
+                        </t>
+                    </t> <!-- for arg_line -->
+                </div>
+            </t> <!-- for doc_id -->
+        </template>
+
+        <template id="format_print_template">
+            <t t-set="has_copies" t-value="false"/>
+            <t t-foreach="copies_lines" t-as="copy">
+                <t t-set="has_copies" t-value="true"/>
+                <t t-set="copy_id" t-value="copy.id"/>
+                <t t-set="copy_desc" t-value="copy.description"/>
+                <t t-call="vitt_format_print.format_print_template_document"/>
+            </t>
+            <t t-if="(has_copies is False)">
+                <t t-set="copy_desc" t-value="' '"/>
+                <t t-call="vitt_format_print.format_print_template_document"/>
+            </t>
+        </template>
+    </data>
+</odoo>

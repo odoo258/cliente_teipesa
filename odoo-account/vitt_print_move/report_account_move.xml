@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <report
+            id="report_account_move"
+            string="Print Move"
+            model="account.move"
+            report_type="qweb-pdf"
+            file="vitt_print_move.report_move" 
+            name="vitt_print_move.report_move" 
+        />
+    </data>
+</odoo>

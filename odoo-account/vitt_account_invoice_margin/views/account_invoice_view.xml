@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="vitt_account_invoice_margin_form" model="ir.ui.view">
+            <field name="name">vitt.account.invoice.margin.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <field name="date_due" position="after">
+                    <field name="margin" groups="vitt_account_invoice_margin.vitt_account_invoice_margin_margin"/>
+                </field>
+                <xpath expr="//page/field[@name='invoice_line_ids']/tree/field[@name='invoice_line_tax_ids']" position="before">
+                    <!-- <field name="cost" />
+                    <field name="cost_total" />
+                    <field name="margin" /> -->
+                    <field name="cost" groups="vitt_account_invoice_margin.vitt_account_invoice_margin_cost" />
+                    <field name="cost_total" groups="vitt_account_invoice_margin.vitt_account_invoice_margin_cost" />
+                    <field name="margin" groups="vitt_account_invoice_margin.vitt_account_invoice_margin_margin" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

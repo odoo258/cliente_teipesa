@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="account_invoice_format_print_template" inherit_id="vitt_format_print.format_print_template">
+                <xpath expr="//div[@name='main_page']" position="inside">
+                    <t t-if="not data.get('form').get('label_preview')">
+                        <t t-foreach="arguments_lines" t-as="arg_line">
+                            <t t-set="line_pos" t-value="1.0"/>
+                            <t t-if="arg_line.from_model == 'account.invoice.line'" >
+                                <!-- Invoice Lines -->
+                                <t t-foreach="doc_id.invoice_line_ids" t-as="invoice_line">
+                                    <t t-set="style" t-value="get_style(data['form'],arg_line.id, line_pos)" />
+                                    <t t-set="line_pos" t-value="line_pos+1"/>
+                                    <span t-esc="get_value(data['form'], invoice_line.id, arg_line.id)" t-att-style="style"/>
+                                </t> <!-- for -->
+                            </t>
+                            <t t-set="line_pos" t-value="1.0"/>
+                            <t t-if="arg_line.from_model == 'account.invoice.tax'" >
+                                <!-- Invoice Taxes -->
+                                <t t-foreach="doc_id.tax_line_ids" t-as="invoice_tax">
+                                    <t t-set="style" t-value="get_style(data['form'],arg_line.id, line_pos)" />
+                                    <t t-set="line_pos" t-value="line_pos+1"/>
+                                    <span t-esc="get_value(data['form'], invoice_tax.id, arg_line.id)" t-att-style="style"/>
+                                </t> <!-- for -->
+                            </t>
+                        </t>
+                    </t>
+                </xpath>
+        </template>
+
+    </data>
+</odoo>

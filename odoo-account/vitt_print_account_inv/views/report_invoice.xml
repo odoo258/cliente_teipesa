@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <template id="report_invoice_layouted" inherit_id="account.report_invoice_document">
+
+            <xpath expr="//div[@name='invoice_address']/address" position="before">
+                <strong>Customer:</strong>
+            </xpath>
+            <xpath expr="//t/div/h2" position="after">
+                <span t-if="o.payment_term_id">
+                    <span t-field="o.payment_term_id.note"/>
+                </span>
+            </xpath>
+
+            <xpath expr="//t/div/div[4]" position="replace">
+                <!--this replace the tax table -->
+                <div class="row" t-if="len(o.tax_line_ids) &gt; 1">
+                </div>
+            </xpath>
+
+            <xpath expr="/t/t/div/div[3]/div" position="before">
+                <div class='col-xs-6 pull-left' style="margin-left: 6mm;">
+                    <div class="row" t-if="len(o.tax_line_ids) &gt; 1">
+                        <div>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Tax</th>
+                                        <th class="text-right">Amount</th>
+                                        <th class="text-right">SubTotal</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr t-foreach="o.tax_line_ids" t-as="t">
+                                        <td><span t-field="t.tax_id.description"/></td>
+                                        <td class="text-right">
+                                            <span t-field="t.amount" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="t.base" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+
+            <xpath expr="/t/t/div/div[3]/div/table/tr[2]/td[2]/span" position="after">
+                <t t-if="o.company_id.currency_id.id!=o.currency_id.id">
+                    <tr class="border-black">
+                        <td><span>Rate</span></td>
+                        <t t-set="i" t-value="o.currency_id.rate"/>
+                        <td class="text-right"> <span t-esc="'%.4f'%(1/i)"/> <span t-field="o.company_id.currency_id.symbol"/> </td>
+                    </tr>
+                </t>
+            </xpath>
+            <xpath expr="//t/div/p[2]/span" position="replace">
+                <!--this line replace the payment term number -->
+            </xpath>
+        </template>
+    </data>
+</odoo>
