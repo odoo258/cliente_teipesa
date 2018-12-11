@@ -8,7 +8,9 @@ class ResPartner(models.Model):
      entityf = fields.Boolean(string="Is an Entity",translate=True)
      entity = fields.Many2one('res.partner',string="Entity",domain="[('entityf', '=', True),('id', '!=', id)]",translate=True)
      passwd = fields.Char(size=64,string="Password",translate=True)
-
+     email_confirmed =fields.Boolean(string="Emial Confirmed")
+     app_metadata = fields.Text(string="Metadata")
+     qr_dni = fields.Boolean(string="QR Dni")
 
 class AccountInvoiceLine(models.Model):
      _inherit = 'account.invoice.line'

@@ -6,7 +6,7 @@
     'author': "Moogah",
     'website': "http://www.moogah.com",
     'category': 'Uncategorized',
-    'version': '10.1.0.5',
+    'version': '10.1.0.6',
     'depends': ['base','sale','account',],
     'data': [
         'views/views.xml',
