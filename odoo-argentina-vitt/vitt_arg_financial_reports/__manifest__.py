@@ -4,10 +4,10 @@
 # Copyright (c) 2011 Cubic ERP - Teradata SAC. (http://cubicerp.com)
 
 {
-    'name': 'Argentina - Financial Reports',
-    'version': '10.0.1.0',
+    'name': 'Argentina - balance report',
+    'version': '1.0',
     'description': """
-Financial reports with ARG Chart of Accounts using Account Tags instead of account type.
+Balance report attempt to import data Balance report attempt to import data Balance report attempt to import data
 
     """,
     'author': ['Moogah'],

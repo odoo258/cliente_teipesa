@@ -1,20 +1,4 @@
 <odoo>
-    <data noupdate="1">
-        <record id="paperformat_inv_vitt" model="report.paperformat">
-            <field name="name">paperformat_inv_vitt</field>
-            <field name="default" eval="True"/>
-            <field name="format">A4</field>
-            <field name="orientation">Portrait</field>
-            <field name="margin_top">40</field>
-            <field name="margin_bottom">23</field>
-            <field name="margin_left">7</field>
-            <field name="margin_right">7</field>
-            <field name="header_line" eval="False"/>
-            <field name="header_spacing">30</field>
-            <field name="dpi">90</field>
-        </record>
-    </data>
-
     <data>
         <template id="report_invoice_document_inherit_vitt_afip_invoice_format_invoice" inherit_id="account.report_invoice_document">
             <xpath expr="//t[@t-call='report.external_layout']" position="replace">
@@ -37,18 +21,13 @@
                             </div>
                             <div class="col-xs-4" style="text-align:right;font-size:16px;">
                                 <h2>
-                                    <t t-if="o.journal_document_type_id.document_type_id.internal_type == 'debit_note'">
-                                        <span>Nota de Debito</span>
-                                    </t>
-                                    <t t-if="o.journal_document_type_id.document_type_id.internal_type != 'debit_note'">
-                                        <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura</span>
-                                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
-                                        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Factura borrador</span>
-                                        <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span>
-                                        <span t-if="o.type == 'out_refund'">Nota de Crédito</span>
-                                        <span t-if="o.type == 'in_refund'">Nota de Crédito de Proveedor</span>
-                                        <span t-if="o.type == 'in_invoice'">Factura de Proveedor</span>
-                                    </t>
+                                    <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura</span>
+                                    <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
+                                    <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Factura borrador</span>
+                                    <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span>
+                                    <span t-if="o.type == 'out_refund'">Nota de Crédito</span>
+                                    <span t-if="o.type == 'in_refund'">Nota de Crédito de Proveedor</span>
+                                    <span t-if="o.type == 'in_invoice'">Factura de Proveedor</span>
                                     <!-- span t-field="o.display_name" / -->
                                 </h2>
                             </div>
@@ -84,12 +63,12 @@
                             <div class="col-xs-6">
                                 <strong style="display:inline-block;line-height:20px;">Dirección:</strong>
                                 <span t-field="o.company_id.street" />
-                            -
-                                <span t-field="o.company_id.zip" />
-                            -
+                            ,
+                            
+                                <span t-field="o.company_id.street2" />
+                            ,
+                            
                                 <span t-field="o.company_id.city" />
-                            -
-                                <span t-field="o.company_id.state_id" />
                             .
                         
                             </div>
@@ -335,30 +314,6 @@
                 </div>
             </xpath>
         </template>
-
-        <report
-            id="account.account_invoices"
-            model="account.invoice"
-            string="Invoices"
-            report_type="qweb-pdf"
-            name="account.report_invoice"
-            file="account.report_invoice"
-            attachment_use="True"
-            attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
-            paperformat="vitt_arg_einvoice_format.paperformat_inv_vitt"
-        />
-
-        <report
-            id="account.account_invoice_action_report_duplicate"
-            model="account.invoice"
-            string="Duplicates"
-            report_type="qweb-pdf"
-            name="account.account_invoice_report_duplicate_main"
-            file="account.report_invoice_duplicate"
-            attachment_use="False"
-            paperformat="vitt_arg_einvoice_format.paperformat_inv_vitt"
-        />
-
     </data>
 </odoo>
 

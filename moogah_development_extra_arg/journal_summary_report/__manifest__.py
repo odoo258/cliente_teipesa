@@ -2,7 +2,7 @@
 
 {
     'name': 'Journal Summary Report',
-    'version': '10.0.1.0.3',
+    'version': '10.0.1.0',
     'category': 'Accounting',
     'summary': '',
     'description': """

@@ -5,6 +5,7 @@
     <record id="view_account_payment_form2" model="ir.ui.view">
         <field name="name">account.payment.form2.inherited</field>
         <field name="model">account.payment</field>
+        <field name="priority" eval="800"/>
         <field name="inherit_id" ref="account_withholding.view_account_payment_form" />
         <field name="arch" type="xml">
             <field name='tax_withholding_id' position="after" >
@@ -19,6 +20,7 @@
     <record id="view_account_payment2_from_group_tree_inherit" model="ir.ui.view">
         <field name="name">account.payment2.tree.inherit</field>
         <field name="model">account.payment</field>
+        <field name="priority" eval="800"/>
         <field name="inherit_id" ref="account_payment_group.view_account_payment_from_group_tree"/>
         <field name="arch" type="xml">
 

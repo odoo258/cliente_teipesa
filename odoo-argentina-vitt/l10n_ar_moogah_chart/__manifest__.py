@@ -5,7 +5,7 @@
 
 {
     'name': 'Argentina - Chart of Accounts Template',
-    'version': '10.0.1.0',
+    'version': '2.0',
     'description': """
 Argentinian chart of accounts and tax codes, template.
 ==================================================

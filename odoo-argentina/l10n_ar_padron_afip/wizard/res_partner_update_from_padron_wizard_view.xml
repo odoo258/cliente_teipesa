@@ -23,11 +23,6 @@
             <field name='model'>res.partner.update.from.padron.wizard</field>
             <field name='arch' type='xml'>
                 <form string='Update From Padron AFIP'>
-                    <script>
-                        $(document).ready(function(){
-                        $(".modal-footer").hide();
-                        });
-                    </script>
                     <field name="state" invisible="1" />
                     <header>
                         <button name='update_selection' string='Update Selection'

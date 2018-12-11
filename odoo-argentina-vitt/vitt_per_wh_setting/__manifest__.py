@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Configuracion en Provincias para Percepciones y Retenciones',
-    'summary': 'Configuracion en Provincias para Percepciones y Retenciones',
-    'description': """Configuracion en Provincias para Percepciones y Retenciones""",
+    'name': 'Seteo de provincias para percepciones y retenciones',
+    'summary': 'Seteo de provincias para percepciones y retenciones',
+    'description': """Seteo de provincias para percepciones y retenciones""",
     'version': '10.0.1.0',
     'author': 'Moogah',
     'website': 'http://www.moogah.com',

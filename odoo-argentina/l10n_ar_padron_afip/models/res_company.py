@@ -16,7 +16,7 @@ class ResCompany(models.Model):
 
     arba_cit = fields.Char(
         'CIT ARBA',
-        help='Clave de Identificacion Tributaria de ARBA',
+        help='Clave de Identificación Tributaria de ARBA',
     )
 
     @api.model

@@ -239,13 +239,12 @@ class res_partner_update_from_padron_wizard(models.TransientModel):
                 'partner_id': partner.id,
                 'state': 'selection',
             })
-            self.write(values)
         else:
             values.update({
                 'state': 'finished',
             })
-            return {'type': 'ir.actions.act_window_close'}
 
+        self.write(values)
         # because field is not changed, view is distroyed and reopen, on change
         # is not called an we call it manually
         self.change_partner()

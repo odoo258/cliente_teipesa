@@ -271,5 +271,33 @@
 <menuitem action="action_account_payments_group" id="menu_action_account_payments_group_receivable" parent="account.menu_finance_receivables" sequence="20" groups="account.group_account_user"/>
 <menuitem action="action_account_payments_group_payable" id="menu_action_account_payments_group_payable" parent="account.menu_finance_payables" sequence="20" groups="account.group_account_user"/>
 <!-- <menuitem action="action_account_payments_group_payable" id="menu_action_account_payments_group_payable" parent="account.menu_finance_payables" sequence="20" groups="account.group_account_user"/> -->
+
+
+        <record id="account_payment_group_confirm_view" model="ir.ui.view">
+            <field name="name">account.payment.group.confirm.view</field>
+            <field name="model">account.payment.group.confirm</field>
+            <field name="arch" type="xml">
+                <form string="Confirm Payments Invoices">
+                    <p class="oe_grey">
+                        Once draft Payments are confirmed, you will not be able
+                        to modify them. The Payemnts will receive a unique
+                        number and journal items will be created in your chart
+                        of accounts.
+                    </p>
+                    <footer>
+                        <button string="Confirm Payments" name="payment_confirm" type="object" default_focus="1" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_account_payment_group_confirm"
+            multi="True"
+            key2="client_action_multi" name="Confirm Draft Payments"
+            res_model="account.payment.group.confirm" src_model="account.payment.group"
+            view_mode="form" target="new" view_type="form" />
+
+
 </data>
 </openerp>

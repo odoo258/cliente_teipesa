@@ -21,7 +21,6 @@
                     <group>
                         <field name="customer_invoices" />
                         <field name="vendor_invoices" />
-                        <field name="show_reg_number" />
                     </group>
                     <group>
                         <field name="supplier_payments" />

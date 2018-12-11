@@ -50,7 +50,6 @@ class report_bi_partner_transaction(models.AbstractModel):
             'context_id': context_id,
             'company_ids': context_id.company_ids.ids,
             'partner_id':context_id.partner_id.id,
-            'filter_unfold_all': context_id.filter_unfold_all,
         })
         if new_context.get('xlsx_format'):
             res = self.with_context(new_context)._xlsx_lines(line_id)
@@ -74,6 +73,7 @@ class report_bi_partner_transaction(models.AbstractModel):
             raise UserError(_('Partner Not Found'))
 
         # Code for initial balance
+
         if not line_id:
             for currency in self.env['res.currency'].search([]):
                 grand_total_debit = 0.0
@@ -95,8 +95,8 @@ class report_bi_partner_transaction(models.AbstractModel):
                     'footnotes': {},
                     'columns': ['', '', '', '', '', '', '', '', ''],
                     'level': 1,
-                    # 'unfoldable': False,
-                    # 'unfolded': False,
+                    'unfoldable': False,
+                    'unfolded': False,
                     'colspan': 4,
                 })
                 for inv in total_customer_invoices:
@@ -136,7 +136,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                                 self._format(grand_total_credit, currency),
                                 self._format(grand_total_balance, currency)],
                     'level': 0,
-                    # 'unfoldable': False,
+                    'unfoldable': False,
                 })
 
                 ### forward initial balance value
@@ -247,7 +247,7 @@ class report_bi_partner_transaction(models.AbstractModel):
 
                         vals.update({
                             'id': dict['obj'].id,
-                            'unfolded': dict['obj'] and (dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
+                            # 'unfolded': False,
                             'action': dict['obj'].open_payment_group_from_report(),
                             'footnotes': self.env.context['context_id']._get_footnotes(vals['type'], dict['obj'].id),
                             'columns': [dict['date'], dict['doc_type'], dict['number'], dict['reference'],
@@ -259,7 +259,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                         })
 
                         lines.append(vals)
-                        if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                        if context.get('print_mode'):
                             lines = self.get_account_payment_line(dict['obj'].id, lines, partner_id)
 
                     elif dict.get('custom_type') == 'invoice':
@@ -271,7 +271,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                             'type': 'move_line_id',
                             'move_id': dict['obj'].move_id.id,
                             'name': dict['number'],
-                            # 'unfoldable': False,
+                            'unfoldable': False,
                             'action': dict['obj'].open_invoice_from_report(),
                             'footnotes': self.env.context['context_id']._get_footnotes('move_line_id', dict['obj'].id),
                             'level': 0,
@@ -294,7 +294,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                                     self._format(total_credit, currency),
                                     self._format(balance, currency)],
                         'level': 0,
-                        # 'unfoldable': False,
+                        'unfoldable': False,
                     })
                 lines.append({
                     'id': 0,
@@ -303,8 +303,8 @@ class report_bi_partner_transaction(models.AbstractModel):
                     'footnotes': {},
                     'columns': ['', '', '', '', '', '', '', '', ''],
                     'level': 1,
-                    # 'unfoldable': False,
-                    # 'unfolded': False,
+                    'unfoldable': False,
+                    'unfolded': False,
                 })
 
         else:
@@ -331,7 +331,6 @@ class report_bi_partner_transaction(models.AbstractModel):
 
         # Code for initial balance
 
-        unfold_all = context['context_id']['unfolded_payments'] and True or False
         if not line_id:
             for currency in self.env['res.currency'].search([]):
                 grand_total_debit = 0.0
@@ -354,7 +353,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                     'columns': ['', '', '', '', '', ''],
                     'level': 1,
                     'unfoldable': False,
-                    # 'unfolded': False,
+                    'unfolded': False,
                     'colspan': 4,
                 })
                 for inv in total_customer_invoices:
@@ -505,7 +504,7 @@ class report_bi_partner_transaction(models.AbstractModel):
 
                         vals.update({
                             'id': dict['obj'].id,
-                            'unfolded': dict['obj'] and (dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
+                            # 'unfolded': False,
                             'action': dict['obj'].open_payment_group_from_report(),
                             'footnotes': self.env.context['context_id']._get_footnotes(vals['type'], dict['obj'].id),
                             'columns': [dict['date'], dict['doc_type'] or '', dict['number'], dict['reference'] or '',
@@ -517,7 +516,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                         })
 
                         lines.append(vals)
-                        if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                        if context.get('print_mode'):
                             lines = self.get_account_payment_line(dict['obj'].id, lines, partner_id)
 
                     elif dict.get('custom_type') == 'invoice':
@@ -563,7 +562,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                         'columns': ['', '', '', '', '', '', '', '', ''],
                         'level': 1,
                         'unfoldable': False,
-                        # 'unfolded': False,
+                        'unfolded': False,
                     })
 
         else:
@@ -628,6 +627,7 @@ class report_bi_partner_transaction(models.AbstractModel):
                                 self._format(debit, line_currency),
                                 self._format(credit, line_currency), self._format(balance, line_currency)],
                     'level': 1,
+                    'unfoldable': False,
                 })
                 #             if payment_group_line.matched_amount != 0.0:
         for aml in payment_group_line.matched_move_line_ids:
@@ -717,10 +717,16 @@ class partner_transection_context_report(models.TransientModel):
     _description = "A particular context for the Partner Transaction"
     _inherit = "account.report.context.common"
 
+    fold_field = 'unfolded_invoice'
     partner_id = fields.Many2one('res.partner',"partner")
-    fold_field = 'unfolded_payments'
-    unfolded_payments = fields.Many2many('account.payment.group', 'partner_transection_context_to_payment',
-                                         string='Unfolded lines')
+    
+    @api.multi
+    def get_html_and_data(self, given_context=None):
+        for record in self:
+            if given_context.get('active_id'):
+                record.write({'partner_id':given_context.get('active_id')}) 
+        res = super(partner_transection_context_report, self).get_html_and_data(given_context=given_context)
+        return res
    
     def get_report_obj(self):
         return self.env['partner.transaction.report']

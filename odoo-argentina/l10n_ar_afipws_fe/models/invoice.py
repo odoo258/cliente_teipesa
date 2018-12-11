@@ -106,7 +106,22 @@ class AccountInvoice(models.Model):
         'Validation Type',
         compute='get_validation_type',
     )
-    afip_error_log = fields.Text(string="Errores AFIP")
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('afip', 'Sending AFIP'), #new one
+        ('proforma', 'Pro-forma'),
+        ('proforma2', 'Pro-forma'),
+        ('open', 'Open'),
+        ('paid', 'Paid'),
+        ('cancel', 'Cancelled'),
+    ], string='Status', index=True, readonly=True, default='draft',
+        track_visibility='onchange', copy=False,
+        help=" * The 'Draft' status is used when a user is encoding a new and unconfirmed Invoice.\n"
+             " * The 'Pro-forma' status is used when the invoice does not have an invoice number.\n"
+             " * The 'Open' status is used when user creates invoice, an invoice number is generated. It stays in the open status till the user pays the invoice.\n"
+             " * The 'Paid' status is set automatically when the invoice is paid. Its related journal entries may or may not be reconciled.\n"
+             " * The 'Cancelled' status is used when user cancel invoice.")
+
 
 
     @api.one
@@ -129,7 +144,7 @@ class AccountInvoice(models.Model):
             cae_due = ''.join(
                 [c for c in str(self.afip_auth_code_due or '') if c.isdigit()])
             barcode = ''.join(
-                [str(self.company_id.main_id_number),
+                [str(self.company_id.cuit),
                     "%02d" % int(self.document_type_id.code),
                     "%04d" % int(self.journal_id.point_of_sale_number),
                     str(self.afip_auth_code), cae_due])
@@ -194,6 +209,8 @@ class AccountInvoice(models.Model):
         we dont want to loose cae data because of a raise error on next steps
         but it doesn work as expected
         """
+        if self.point_of_sale_type == 'electronic':
+            self.write({'state':'afip'})
         res = super(AccountInvoice, self).invoice_validate()
         self.check_afip_auth_verify_required()
         self.do_pyafipws_request_cae()

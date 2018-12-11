@@ -15,6 +15,10 @@
                     <field name="move_type" position="after">
                         <field name="transport_note" />
                     </field>
+                    <field name="number_of_packages" position="after">
+                        <field name="weight_done" />
+                        <field name="volume_done" />
+                    </field>
                 </data>
             </field>
         </record>

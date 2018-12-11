@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Moogah Setup Localization Data", 
-    'version': '10.0.1.1',
+    'version': '1.0',
     'description': """
-        Instala de forma automática el plan de cuentas, posiciones fiscales e informes financieros.
+        Instala de forma automática el plan de cuentas y posiciones fiscales
         """,
 
     'author': ["Moogah"],

@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Informes de Cuentas x Cobrar y Cuentas x Pagar",
+    'name': "cuentas por pagar/cobrar",
 
-    'summary': """Informes de Cuentas x Cobrar y Cuentas x Pagar""",
+    'summary': """Libros cuentas por pagar/cobrar""",
 
     'description': """
-        Informes de Cuentas x Cobrar y Cuentas x Pagar con soporte de Pagos en Grupo (WIP)
+        Reportes para Cuentas por pagar/cobrar del modulo ocontabilidad
     """,
 
     'author': "Moogah",
     'website': "http://www.Moogah.com",
 
     'category': 'Uncategorized',
-    'version': '10.0.1.0',
+    'version': '0.1',
 
     # any module necessary for this one to work correctly
     'depends': [

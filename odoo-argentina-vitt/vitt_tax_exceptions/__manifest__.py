@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Tax Withholding Exceptions',
-    'description': 'Tax Withholding Exceptions',
+    'name': 'Tax WHolding Exceptions',
+    'description': 'Tax WHolding Exceptions',
     'summary': 'WARNING, replacing whole WHolding calculations',
     'author': 'Moogah',
     'website': 'www.moogah.com',

@@ -7,9 +7,9 @@ class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
     transport_company_id = fields.Many2one('res.partner', "Transport Company")
-    freight_id = fields.Many2one('freight.freight', "Freight", readonly=True,
-                                 states={'draft': [('readonly', False)],
-                                         'sent': [('readonly', False)]})
+    freight_id = fields.Many2one('freight.freight', "Freight",
+                                 states={'done': [('readonly', True)],
+                                         'cancel': [('readonly', True)]})
     transport_note = fields.Text('Transport note')
     volume_done = fields.Float(string='Volume', digits=(16, 4),
                                compute='_compute_vol_wght',

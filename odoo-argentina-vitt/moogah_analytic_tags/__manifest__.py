@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Moogah Install Analytic Tags modules", 
-    'version': '10.0.1.0',
+    'version': '1.0',
     'description': """
         Instala de forma automática todos los módulos que se necesitan para utilizar Etiquetas Analíticas en Compras (Cotizaciones, Ordenes y Facturas),
         Ventas (Cotizaciones, Ordenes y Facturas), suscripciones y Asientos Contables. No incluye el soporte para Bienes de Uso. 

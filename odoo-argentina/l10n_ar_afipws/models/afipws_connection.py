@@ -123,7 +123,7 @@ class AfipwsConnection(models.Model):
         # cfg = self.pool.get('ir.config_parameter')
         # cache = cfg.get_param(cr, uid, 'pyafipws.cache', context=context)
         # proxy = cfg.get_param(cr, uid, 'pyafipws.proxy', context=context)
-        wsdl = self.afip_ws_url
+        wsdl = self.afip_ws_url + '?WSDL'
         # connect to the webservice and call to the test method
         ws.Conectar("", wsdl or "", "")
         cuit = self.company_id.cuit

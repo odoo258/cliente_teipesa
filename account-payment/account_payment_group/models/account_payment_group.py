@@ -855,3 +855,21 @@ class AccountPaymentGroup(models.Model):
     #         },
     #         # 'domain': [('payment_id', 'in', self.payment_ids.ids)],
     #     }
+
+class AccountInvoiceConfirm(models.TransientModel):
+    """
+    This wizard will confirm the all the selected draft invoices
+    """
+    _name = "account.payment.group.confirm"
+    _description = "Confirm the selected Payments"
+
+    @api.multi
+    def payment_confirm(self):
+        context = dict(self._context or {})
+        active_ids = context.get('active_ids', []) or []
+
+        for record in self.env['account.payment.group'].browse(active_ids):
+            if record.state not in ('draft','confirmed'):
+                raise UserError(_("Selected invoice(s) cannot be confirmed as they are not in 'Draft' or 'Pro-Forma' state."))
+            record.post()
+        return {'type': 'ir.actions.act_window_close'}

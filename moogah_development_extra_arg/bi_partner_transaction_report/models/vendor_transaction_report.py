@@ -232,8 +232,7 @@ class report_bi_vendor_transaction(models.AbstractModel):
                                 })
                         vals.update({
                             'id': dict['obj'].id,
-                            'unfolded': dict['obj'] and (
-                                        dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
+                            # 'unfolded': False,
                             'action': dict['obj'].open_payment_group_from_report(),
                             'footnotes':  self.env.context['context_id']._get_footnotes(vals['type'], dict['obj'].id),
                             'columns': [dict['date'], dict['doc_type'], dict['number'],dict['reference'],
@@ -244,7 +243,7 @@ class report_bi_vendor_transaction(models.AbstractModel):
                             })
 
                         lines.append(vals)
-                        if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                        if context.get('print_mode'):
                             lines = self.get_account_payment_line(dict['obj'].id, lines, partner_id)
 
                     elif dict.get('custom_type') == 'invoice':
@@ -475,8 +474,7 @@ class report_bi_vendor_transaction(models.AbstractModel):
                             })
                         vals.update({
                             'id': dict['obj'].id,
-                            'unfolded': dict['obj'] and (
-                                        dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
+                            # 'unfolded': False,
                             'action': dict['obj'].open_payment_group_from_report(),
                             'footnotes': self.env.context['context_id']._get_footnotes(vals['type'], dict['obj'].id),
                             'columns': [dict['date'], dict['doc_type'] or '', dict['number'], dict['reference'] or '',
@@ -488,7 +486,7 @@ class report_bi_vendor_transaction(models.AbstractModel):
                         })
 
                         lines.append(vals)
-                        if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                        if context.get('print_mode'):
                             lines = self.get_account_payment_line(dict['obj'].id, lines, partner_id)
 
                     elif dict.get('custom_type') == 'invoice':
@@ -679,11 +677,16 @@ class vendor_transection_context_report(models.TransientModel):
     _description = "A particular context for the Partner Transaction"
     _inherit = "account.report.context.common"
 
+    fold_field = 'unfolded_invoice'
     partner_id = fields.Many2one('res.partner',"partner")
-    fold_field = 'unfolded_payments'
-    unfolded_payments = fields.Many2many('account.payment.group', 'vendor_transection_context_to_payment',
-                                         string='Unfolded lines')
-
+    
+    @api.multi
+    def get_html_and_data(self, given_context=None):
+        for record in self:
+            if given_context.get('active_id'):
+                record.write({'partner_id':given_context.get('active_id')}) 
+        res = super(vendor_transection_context_report, self).get_html_and_data(given_context=given_context)
+        return res
    
     def get_report_obj(self):
         return self.env['vendor.transaction.report']

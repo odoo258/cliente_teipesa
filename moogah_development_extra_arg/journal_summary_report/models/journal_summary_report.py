@@ -50,7 +50,6 @@ class JournalSummaryReport(models.AbstractModel):
             'supplier_payments': context_id.supplier_payments,
             'customer_receipts': context_id.customer_receipts,
             'sort_by': context_id.sort_by,
-            'show_reg_number': context_id.show_reg_number,
         })
         if new_context.get('xlsx_format'):
             res = self.with_context(new_context)._xlsx_lines(line_id)
@@ -111,26 +110,22 @@ class JournalSummaryReport(models.AbstractModel):
             if ctx.get('sort_by') == 'monthly' and summary_section:
                 lines, number = self.get_summary_section_move_line('html',summary_section, lines, ctx.get('sort_by'), number, move)
 
-            # ref = move.display_name
-            # if ref != '/':
-            #     if len(move.display_name.split('/')) > 1:
-            #         ref = move.display_name.split('/')[0]
-            #     else:
-            #         if move.document_type_id and move.document_type_id.doc_code_prefix \
-            #                 and move.document_number:
-            #             ref = move.document_type_id.doc_code_prefix
+            ref = move.display_name
+            if ref != '/':
+                if len(move.display_name.split('/')) > 1:
+                    ref = move.display_name.split('/')[0]
+                else:
+                    if move.document_type_id and move.document_type_id.doc_code_prefix \
+                            and move.document_number:
+                        ref = move.document_type_id.doc_code_prefix
             move_month = datetime.strptime(move.date, '%Y-%m-%d').month
-            if ctx.get('show_reg_number')==True:
-                name = move.display_name
-            else:
-                name = ''
             lines.append({
                 'id': move.id,
                 'type': 'line',
                 'name': " " + str(number),
                 'footnotes': self.env.context['context_id']._get_footnotes('line', move.id),
                 'columns': [str(number), datetime.strptime(move.date, '%Y-%m-%d').strftime(lang.date_format),
-                            name, '', ''],
+                            move.display_name, '', ref],
                 'level': 2,
                 'unfoldable': False,
                 'month': move_month,
@@ -416,7 +411,6 @@ class JournalSummaryContextReport(models.TransientModel):
     customer_receipts = fields.Boolean('Customer Receipts')
     sort_by = fields.Selection([('monthly', 'Monthly summary'), ('number', 'Number'), ('date', 'Journal Entry Date')],
                                'Sort by', default='monthly')
-    show_reg_number = fields.Boolean(string="Show Reg. Number",default=True)
 
     @api.multi
     def get_html_and_data(self, given_context=None):
@@ -434,8 +428,7 @@ class JournalSummaryContextReport(models.TransientModel):
                         'supplier_payments': wizard.supplier_payments,
                         'customer_receipts': wizard.customer_receipts,
                         'sort_by': wizard.sort_by,
-                        'wizard_id': wizard.id,
-                        'show_reg_number': wizard.show_reg_number})
+                        'wizard_id': wizard.id})
         res = super(JournalSummaryContextReport, self).get_html_and_data(given_context=given_context)
         return res
 
@@ -443,16 +436,13 @@ class JournalSummaryContextReport(models.TransientModel):
         return self.env['journal.summary.report']
 
     def get_column_row_1(self):
-        if self.show_reg_number:
-            return [_("Journal Entry No"), _("Date"), _("Reg. Number"), _(" "), _(" ")]
-        else:
-            return [_("Journal Entry No"), _("Date"), _(" "), _(" "), _(" ")]
+        return [_("No"), _("Date"), _("Comment"), _(" "), _("Reference")]
 
     def get_column_row_2(self):
         return [_("Account No."), _(" "), _("Description"), _("Debit"), _("Credit")]
 
     def get_xlsx_columns_names(self):
-        return [_("Journal Entry No"), _("Date"), _("Comment"), _(" "), _("Account No."), _("Description"), _("Debit"), _("Credit")]
+        return [_("No"), _("Date"), _("Comment"), _("Reference"), _("Account No."), _("Description"), _("Debit"), _("Credit")]
 
     @api.multi
     def get_columns_types(self):
@@ -559,14 +549,10 @@ class JournalSummaryContextReport(models.TransientModel):
         lines = report_obj.with_context(print_mode=True).get_lines(self)
         footnotes = self.get_footnotes_from_lines(lines)
         base_url = self.env['ir.config_parameter'].sudo().get_param('report.url') or self.env['ir.config_parameter'].sudo().get_param('web.base.url')
-
-        wizard = self.env['journal.summary.report.wizard'].browse(self._context['uid'])
         rcontext = {
             'mode': 'print',
             'base_url': base_url,
             'company': self.env.user.company_id,
-            'date_from': datetime.strptime(wizard.start_date, "%Y-%m-%d").strftime("%d-%m/-%Y"),
-            'date_to': datetime.strptime(wizard.end_date, "%Y-%m-%d").strftime("%d-%m-%Y"),
         }
 
         body = self.env['ir.ui.view'].render_template(
@@ -575,19 +561,17 @@ class JournalSummaryContextReport(models.TransientModel):
         )
 
         header = self.env['report'].render(
-            "journal_summary_report.internal_layout",
+            "report.internal_layout",
             values=rcontext,
         )
         header = self.env['report'].render(
             "report.minimal_layout",
             values=dict(rcontext, subst=True, body=header),
         )
+
         landscape = False
 
-        #OJG hardcoded
-        pf_id = self.env['report.paperformat'].search([('name','=','Journal Summary')])
-
-        return self.env['report']._run_wkhtmltopdf([header], [''], [(0, body)], landscape, pf_id, spec_paperformat_args={'data-report-margin-top': 10, 'data-report-header-spacing': 10})
+        return self.env['report']._run_wkhtmltopdf([header], [''], [(0, body)], landscape, self.env.user.company_id.paperformat_id, spec_paperformat_args={'data-report-margin-top': 10, 'data-report-header-spacing': 10})
 
     def get_full_date_names(self, dt_to, dt_from=None):
         convert_date = self.env['ir.qweb.field.date'].value_to_html

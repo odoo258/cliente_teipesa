@@ -15,6 +15,6 @@
         'views/res_partner_id_category_view.xml',
         'views/res_partner_id_number_view.xml',
     ],
-    'version': '10.0.1.0.2',
+    'version': '10.0.1.0.0',
     'post_init_hook': 'post_init_hook',
 }

@@ -8,14 +8,15 @@
     'author': 'Moogah',
     'website': 'http://www.moogah.com',
     'category': 'Other',
-    'version': '10.0.1.0',
+    'version': '1.0',
     'summary': 'Freight information in Sale and Delivery orders',
     'depends': ['sale_order_dates', 'delivery'],
     'data': [
         'security/ir.model.access.csv',
         'views/freight_view.xml',
         'views/sale_order_view.xml',
-        'views/stock_picking_view.xml'
+        'views/stock_picking_view.xml',
+        'views/res_partner_view.xml'
     ],
     'application': False,
 }

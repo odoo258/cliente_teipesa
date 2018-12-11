@@ -83,7 +83,7 @@ class AccountCashInOut(models.Model):
         string='Status', default='draft', readonly=True,translate=True)
     receiptbook_id = fields.Many2one('account.payment.receiptbook','ReceiptBook',
         states={'validated': [('readonly', True)]},translate=True)
-    paym_account_analytic_id = fields.Many2many('account.analytic.tag', string=' Payment Analytic Tag',translate=True,
+    paym_account_analytic_id = fields.Many2one('account.analytic.tag', string=' Payment Analytic Tag',translate=True,
         states={'validated': [('readonly', True)]})
     currency_id = fields.Many2one('res.currency', string='Currency', required=True,
         states={'validated': [('readonly', '=', True)]},translate=True)
@@ -98,14 +98,14 @@ class AccountCashInOut(models.Model):
             translate=True,states={'validated': [('readonly', True)]})
     cash_account_id = fields.Many2one('account.account',string='Cash account',required=True,
             states={'validated': [('readonly', True)]})
-    cash_account_analytic_id = fields.Many2many('account.analytic.tag', string='Cash Analytic Tag',translate=True,
+    cash_account_analytic_id = fields.Many2one('account.analytic.tag', string='Cash Analytic Tag',translate=True,
             states={'validated': [('readonly', True)]})
     benefitiary_id = fields.Many2one('res.partner',string="Benefitiary Supplier",states={'validated': [('readonly', True)]},translate=True)
     employee_id = fields.Many2one('hr.employee',string="Benefitiary Employee",states={'validated': [('readonly', True)]},translate=True)
     journal_has_checks = fields.Boolean(compute="_compute_journal_has_checks")
     company_id = fields.Many2one('res.company','Company')
     sub_journal = fields.Many2one('setting.subtype.journal', translate=True,string="Sub Type")
-    cash_reference = fields.Char(string="Referencia",translate=True)
+    cash_reference = fields.Char(string="Reference",translate=True)
 
     @api.multi
     @api.depends('benefitiary_id','employee_id')
@@ -208,7 +208,6 @@ class AccountCashInOut(models.Model):
                         'account_id': debit_account.id,
                         'credit': cash.total_amount / cur_factor,
                         'currency_id': cash.currency_id.id,
-                        'analytic_tag_ids': [(6, False, cash.paym_account_analytic_id._ids)]
                         # 'ref': ref,
                     }
                     debit_line_vals = {
@@ -217,7 +216,6 @@ class AccountCashInOut(models.Model):
                         'debit': cash.total_amount / cur_factor,
                         'currency_id': cash.currency_id.id,
                         # 'ref': ref,
-                        'analytic_tag_ids': [(6, False, cash.paym_account_analytic_id._ids)]
                     }
                     if cash.currency_id.id != self.company_id.currency_id.id:
                         credit_line_vals.update({'amount_currency': cash.total_amount})
@@ -230,7 +228,6 @@ class AccountCashInOut(models.Model):
                         'debit': cash.total_amount / cur_factor,
                         'currency_id': cash.currency_id.id,
                         # 'ref': ref,
-                        'analytic_tag_ids': [(6, False, cash.cash_account_analytic_id._ids)]
                     }
                     credit_line_vals = {
                         'name': name,
@@ -238,7 +235,6 @@ class AccountCashInOut(models.Model):
                         'credit': cash.total_amount / cur_factor,
                         'currency_id': cash.currency_id.id,
                         # 'ref': ref,
-                        'analytic_tag_ids': [(6, False, cash.cash_account_analytic_id._ids)]
                     }
                     if cash.currency_id.id != self.company_id.currency_id.id:
                         debit_line_vals.update({'amount_currency': cash.total_amount})

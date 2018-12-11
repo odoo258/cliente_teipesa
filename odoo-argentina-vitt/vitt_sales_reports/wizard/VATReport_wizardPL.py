@@ -235,7 +235,7 @@ class sales_reports(models.TransientModel):
         vatcodesbase = {}
         tmp = 0.0
         for o in invoices:
-            if o.journal_id.use_documents:
+            if o.journal_id.use_documents and o.validated_inv(self):
                 subindex = 0
                 if self.det_level == 'detailed':
                     worksheet.write(index, subindex, o.date_invoice)

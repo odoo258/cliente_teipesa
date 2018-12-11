@@ -261,8 +261,7 @@ class CurrenciesVendorLedgerReport(models.AbstractModel):
 
                             vals.update({
                                 'id': dict['obj'].id,
-                                'unfolded': dict['obj'] and (
-                                    dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
+                                # 'unfolded': False,
                                 'action': dict['obj'].open_payment_group_from_report(),
                                 'footnotes': self.env.context['context_id']._get_footnotes(vals['type'], dict['obj'].id),
                                 'columns': [dict['date'], dict['doc_type'], dict['number'], dict['reference'],
@@ -275,7 +274,7 @@ class CurrenciesVendorLedgerReport(models.AbstractModel):
                             })
 
                             lines.append(vals)
-                            if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                            if context.get('print_mode'):
                                 lines = self.get_account_payment_line(dict['obj'].id, lines)
 
                         elif dict.get('custom_type') == 'invoice':
@@ -531,8 +530,7 @@ class CurrenciesVendorLedgerReport(models.AbstractModel):
 
                             vals.update({
                                 'id': dict['obj'].id,
-                                'unfolded': dict['obj'] and (
-                                    dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
+                                # 'unfolded': False,
                                 'action': dict['obj'].open_payment_group_from_report(),
                                 'footnotes': self.env.context['context_id']._get_footnotes(vals['type'],
                                                                                            dict['obj'].id),
@@ -546,7 +544,7 @@ class CurrenciesVendorLedgerReport(models.AbstractModel):
                             })
 
                             lines.append(vals)
-                            if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                            if context.get('print_mode'):
                                 lines = self.get_account_payment_line(dict['obj'].id, lines)
 
                         elif dict.get('custom_type') == 'invoice':
@@ -715,6 +713,7 @@ class CurrenciesVendorLedgerReport(models.AbstractModel):
         else:
             if payment_group_line.unmatched_amount and payment_group_line.payment_ids:
                 return payment_group_line.payment_ids[0].currency_id
+
     
     @api.model
     def get_title(self):
@@ -739,13 +738,24 @@ class CurrenciesVendorLedgerContextReport(models.TransientModel):
     _description = "A particular context for the Partner Transaction"
     _inherit = "account.report.context.common"
 
+    fold_field = 'unfolded_invoice'
     partners_ids = fields.Many2many('res.partner', 'vendor_ledger_to_partners', string='Unfolded lines')
-    fold_field = 'unfolded_payments'
-    unfolded_payments = fields.Many2many('account.payment.group', 'currencies_vendor_context_to_payment',
-                                         string='Unfolded lines')
     wizard_id = fields.Integer(string='Customer Wizard')
     
-
+    @api.multi
+    def get_html_and_data(self, given_context=None):
+        for record in self:
+            if given_context.get('active_id', False):
+                wizard = self.env['partner.transaction.report.wizard'].browse(given_context.get('active_id'))
+                if wizard and record.wizard_id != wizard.id:
+                    record.write({'date_from':wizard.initial_date,
+                                  'date_to':wizard.end_date,
+                                  'date_filter': 'custom',
+                                  'wizard_id': wizard.id,
+                                  'partners_ids':[(6, 0, wizard.partner_ids.ids)]})
+        res = super(CurrenciesVendorLedgerContextReport, self).get_html_and_data(given_context=given_context)
+        return res
+   
     def get_report_obj(self):
         return self.env['currencies.vendor.ledger.report']
 

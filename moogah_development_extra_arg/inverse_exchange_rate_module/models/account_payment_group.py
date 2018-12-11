@@ -120,7 +120,7 @@ class AccountPaymentGroup(models.Model):
             currency = rec.to_pay_move_line_ids.mapped('invoice_id.currency_id') | rec.to_pay_move_line_ids.mapped(
                 'currency_id')
             if currency:
-                sign = rec.partner_type == 'supplier' and -1.0 or 1.0
+                sign = self.partner_type == 'supplier' and -1.0 or 1.0
                 rec.inv_currency_id = currency[0].id
                 if rec.inv_currency_id.id == rec.currency_id.id:
                     rec.total_inv_currency2 = sum(rec.to_pay_move_line_ids.mapped('amount_residual'))
@@ -179,7 +179,7 @@ class AccountPaymentGroup(models.Model):
     def _compute_edit_reference(self):
         for rec in self:
             access_right = (self.env.user.has_group(
-                'account.group_account_invoice') and not rec.edit_billing_users) or self.env.user.has_group(
+                'account.group_account_invoice') and not self.edit_billing_users) or self.env.user.has_group(
                 'account.group_account_manager')
             rec.edit_reference = access_right and ((rec.state == 'posted' and rec.anticipate) or (
                 rec.state != 'posted' and rec.selected_debt < rec.payments_amount))

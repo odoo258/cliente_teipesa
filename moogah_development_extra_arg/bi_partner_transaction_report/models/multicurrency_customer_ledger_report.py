@@ -268,8 +268,6 @@ class CurrenciesCustomerLedgerReport(models.AbstractModel):
 
                             vals.update({
                                 'id': dict['obj'].id,
-                                'unfolded': dict['obj'] and (
-                                    dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
                                 'action': dict['obj'].open_payment_group_from_report(),
                                 'footnotes': self.env.context['context_id']._get_footnotes(vals['type'],
                                                                                            dict['obj'].id),
@@ -282,7 +280,7 @@ class CurrenciesCustomerLedgerReport(models.AbstractModel):
                             })
 
                             lines.append(vals)
-                            if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                            if context.get('print_mode'):
                                 lines = self.get_account_payment_line(dict['obj'].id, lines)
 
                         elif dict.get('custom_type') == 'invoice':
@@ -549,8 +547,6 @@ class CurrenciesCustomerLedgerReport(models.AbstractModel):
 
                             vals.update({
                                 'id': dict['obj'].id,
-                                'unfolded': dict['obj'] and (
-                                    dict['obj'].id in context['context_id']['unfolded_payments'].ids) or False,
                                 'action': dict['obj'].open_payment_group_from_report(),
                                 'footnotes': self.env.context['context_id']._get_footnotes(vals['type'],
                                                                                            dict['obj'].id),
@@ -563,7 +559,7 @@ class CurrenciesCustomerLedgerReport(models.AbstractModel):
                             })
 
                             lines.append(vals)
-                            if dict['obj'].id in context['context_id']['unfolded_payments'].ids:
+                            if context.get('print_mode'):
                                 lines = self.get_account_payment_line(dict['obj'].id, lines)
 
                         elif dict.get('custom_type') == 'invoice':
@@ -763,12 +759,24 @@ class CurrenciesCustomerLedgerContextReport(models.TransientModel):
     _description = "A particular context for the Currencies Customer Ledger Report"
     _inherit = "account.report.context.common"
 
+    fold_field = 'unfolded_partners'
     partners_ids = fields.Many2many('res.partner', 'customer_ledger_to_partners', string='Unfolded lines')
-    fold_field = 'unfolded_payments'
-    unfolded_payments = fields.Many2many('account.payment.group', 'currencies_customer_context_to_payment',
-                                         string='Unfolded lines')
     wizard_id = fields.Integer(string='Customer Wizard')
 
+    @api.multi
+    def get_html_and_data(self, given_context=None):
+        for record in self:
+            if given_context.get('active_id', False):
+                wizard = self.env['partner.transaction.report.wizard'].browse(given_context.get('active_id'))
+                if wizard and record.wizard_id != wizard.id:
+                    record.write({
+                                'date_from':wizard.initial_date,
+                                'date_to':wizard.end_date,
+                                'date_filter': 'custom',
+                                'wizard_id': wizard.id,
+                                'partners_ids':[(6, 0, wizard.partner_ids.ids)]})
+        res = super(CurrenciesCustomerLedgerContextReport, self).get_html_and_data(given_context=given_context)
+        return res
    
     def get_report_obj(self):
         return self.env['currencies.customer.ledger.report']

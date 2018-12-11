@@ -16,11 +16,6 @@
 #
 ##############################################################################
 {
-    'name': 'TAX report Withholdings on Payments',
-    'version': '10.0.1.0.0',
-    'description': """
-        App requerido para permitir el uso de Retenciones e informes de Odoo EE.
-        """,
     'author': 'Moogah,ADHOC SA',
     'website': 'www.moogah.com',
     'license': 'AGPL-3',
@@ -31,5 +26,7 @@
         'account_payment_group',
     ],
     'installable': True,
+    'name': 'TAX report Withholdings on Payments',
     'test': [],
+    'version': '10.0.1.0.0',
 }

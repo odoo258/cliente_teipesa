@@ -11,7 +11,7 @@
     'summary': 'VITT AGIP Web Service',
     'author': 'Moogah',
     'website': 'http://www.moogah.com',
-    'version': '10.0.1.0',
+    'version': '10.0.1.2',
     'license': 'Other proprietary',
     'maintainer':'Osvaldo Gentile',
     'contributors':'',

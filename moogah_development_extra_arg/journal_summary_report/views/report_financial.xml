@@ -2,46 +2,27 @@
 <odoo>
 <data>
 
-    <template id="internal_layout">
-        <!-- Multicompany -->
-        <t t-if="o and 'company_id' in o">
-            <t t-set="company" t-value="o.company_id"></t>
-        </t>
-        <t t-if="not o or not 'company_id' in o">
-            <t t-set="company" t-value="res_company"></t>
-        </t>
-
-        <div class="header">
-            <div class="row" style="font:11px">
-                <div class="col-xs-3">
-                    <!--span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/-->
-                    <span t-esc="date_from"/>/<span t-esc="date_to"/>
-                </div>
-                <div class="col-xs-5 text-center">
-                    <span t-esc="company.name"/>
-                </div>
-                <div class="col-xs-4 text-right">
-                    <ul class="list-inline">
-                        <li><span class="page"/></li>
-                        <li>/</li>
-                        <li><span class="topage"/></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <t t-raw="0" />
-    </template>
-
     <template id="report_financial_line_journal_summary" inherit_id="account_reports.report_financial_line" primary="True">
         <xpath expr="//td[@t-att-class='tdclass']" position="replace"/>
     </template>
 
     <template id="report_financial_body_journal_summary" inherit_id="account_reports.report_financial_body" primary="True">
-        <xpath expr="//h2" position="replace">
-        </xpath>
-        <xpath expr="//div[@class='row']" position="replace">
-        </xpath>
-        <xpath expr="//h4" position="replace">
+        <xpath expr="//h4" position="after">
+            <div class="row" t-if="context.get_report_obj().get_name() == 'journal_summary' and not context.env.context.get('public')" style='margin-top: 20px; margin-bottom: 20px;'>
+                <div class="col-xs-4" t-if="mode != 'print'">
+                    <!--<t t-if="not context.get_report_obj().get_report_type().date_range"><t t-raw="context.get_full_date_names(context.date_to)" /></t>-->
+                    <t t-if="context.get_report_obj().get_report_type().date_range"><t t-raw="context.get_full_date_names(context.date_to, context.date_from)" /></t>
+                </div>
+                <div class="col-xs-4">
+                    <t t-if="context.customer_invoices or context.vendor_invoices or context.supplier_payments or context.customer_receipts">
+                        Journal Entry Summary:
+                        <t t-if="context.customer_invoices">Customer Invoices </t>
+                        <t t-if="context.vendor_invoices">Vendor Invoices </t>
+                        <t t-if="context.customer_receipts">Customer Receipts </t>
+                        <t t-if="context.supplier_payments">Supplier Payments</t>
+                    </t>
+                </div>
+            </div>
         </xpath>
         <table width='100%' t-att-class="' '.join(['o_account_reports_table', report.get_name() in ['aged_receivable', 'aged_payable'] and 'table-striped' or ''])" position="attributes">
             <attribute name="style">font-family: 'Arial'; font-size:0.9em;line-height: normal;</attribute>
@@ -69,11 +50,10 @@
         </xpath>
     </template>
 
+
     <template id="report_financial_journal_summary" inherit_id="account_reports.report_financial" primary="True">
         <xpath expr="//t[@t-call='account_reports.report_financial_body']" position="replace">
-            <div class="page">
-                <t t-call='journal_summary_report.report_financial_body_journal_summary' />
-            </div>
+            <t t-call='journal_summary_report.report_financial_body_journal_summary' />
         </xpath>
     </template>
 
@@ -81,7 +61,7 @@
         <xpath expr="//t[@t-call='account_reports.report_financial']" position="replace">
             <t t-call='journal_summary_report.report_financial_journal_summary' />
         </xpath>
-    </template>
+</template>
 
 </data>
 </odoo>

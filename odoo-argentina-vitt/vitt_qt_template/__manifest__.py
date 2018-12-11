@@ -12,7 +12,7 @@
     'website': "http://www.Moogah.com",
 
     'category': 'Uncategorized',
-    'version': '10.0.1.0',
+    'version': '0.1',
 
     # any module necessary for this one to work correctly
     'depends': [

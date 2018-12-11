@@ -74,78 +74,74 @@ class AccountReportContextCommon(models.TransientModel):
 
     @api.multi
     def get_html_and_data(self, given_context=None):
-        if self.get_report_obj().get_name() in ['detailed_general_ledger']:
-            if given_context is None:
-                given_context = {}
-            result = {}
-            if given_context:
-                if 'force_account' in given_context and (not self.date_from or self.date_from == self.date_to):
-                    self.date_from = \
-                        self.env.user.company_id.compute_fiscalyear_dates(datetime.strptime(self.date_to, "%Y-%m-%d"))[
-                            'date_from']
-                    self.date_filter = 'custom'
-            lines = self.get_report_obj().get_lines(self)
-            rcontext = {
-                'res_company': self.env['res.users'].browse(self.env.uid).company_id,
-                'context': self.with_context(**given_context),
-                'report': self.get_report_obj(),
-                'lines': lines,
-                'footnotes': self.get_footnotes_from_lines(lines),
-                'mode': 'display',
-            }
-            result['html'] = self.env['ir.model.data'].xmlid_to_object(self.get_report_obj().get_template()).render(
-                rcontext)
-            result['report_type'] = self.get_report_obj().get_report_type().read(
-                ['date_range', 'comparison', 'cash_basis', 'analytic', 'extra_options', 'account', 'balance','dimension'])[0]
-            select = ['id', 'date_filter', 'date_filter_cmp', 'date_from', 'date_to', 'periods_number', 'account_range',
-                      'date_from_cmp',
-                      'date_to_cmp', 'cash_basis', 'all_entries', 'company_ids', 'multi_company', 'hierarchy_3', 'analytic',
-                      'balance', 'analytic_account_dimension_id']
-            if self.get_report_obj().get_name() == 'general_ledger' or \
-                            self.get_report_obj().get_name() == 'detailed_general_ledger':
-                select += ['journal_ids']
-                result['available_journals'] = self.get_available_journal_ids_names_and_codes()
+        if given_context is None:
+            given_context = {}
+        result = {}
+        if given_context:
+            if 'force_account' in given_context and (not self.date_from or self.date_from == self.date_to):
+                self.date_from = \
+                    self.env.user.company_id.compute_fiscalyear_dates(datetime.strptime(self.date_to, "%Y-%m-%d"))[
+                        'date_from']
+                self.date_filter = 'custom'
+        lines = self.get_report_obj().get_lines(self)
+        rcontext = {
+            'res_company': self.env['res.users'].browse(self.env.uid).company_id,
+            'context': self.with_context(**given_context),
+            'report': self.get_report_obj(),
+            'lines': lines,
+            'footnotes': self.get_footnotes_from_lines(lines),
+            'mode': 'display',
+        }
+        result['html'] = self.env['ir.model.data'].xmlid_to_object(self.get_report_obj().get_template()).render(
+            rcontext)
+        result['report_type'] = self.get_report_obj().get_report_type().read(
+            ['date_range', 'comparison', 'cash_basis', 'analytic', 'extra_options', 'account', 'balance','dimension'])[0]
+        select = ['id', 'date_filter', 'date_filter_cmp', 'date_from', 'date_to', 'periods_number', 'account_range',
+                  'date_from_cmp',
+                  'date_to_cmp', 'cash_basis', 'all_entries', 'company_ids', 'multi_company', 'hierarchy_3', 'analytic',
+                  'balance', 'analytic_account_dimension_id']
+        if self.get_report_obj().get_name() == 'general_ledger' or \
+                        self.get_report_obj().get_name() == 'detailed_general_ledger':
+            select += ['journal_ids']
+            result['available_journals'] = self.get_available_journal_ids_names_and_codes()
 
-            if self.get_report_obj().get_name() == 'partner_ledger':
-                select += ['account_type']
-            result['report_context'] = self.read(select)[0]
-            result['report_context'].update(self._context_add())
+        if self.get_report_obj().get_name() == 'partner_ledger':
+            select += ['account_type']
+        result['report_context'] = self.read(select)[0]
+        result['report_context'].update(self._context_add())
 
-            # TODO:Incluyendo account
-            if result['report_type']['account']:
-                result['report_context']['account_ids'] = [(t.id, t.name) for t in self.account_ids]
-                result['report_context']['account_type_ids'] = [(t.id, t.name) for t in self.account_type_ids]
+        # TODO:Incluyendo account
+        if result['report_type']['account']:
+            result['report_context']['account_ids'] = [(t.id, t.name) for t in self.account_ids]
+            result['report_context']['account_type_ids'] = [(t.id, t.name) for t in self.account_type_ids]
 
-                result['report_context'][
-                    'available_account_ids'] = self.account_manager_id.get_available_account_ids_and_names()
-                result['report_context'][
-                    'available_account_type_ids'] = self.account_manager_id.get_available_account_type_ids_and_names()
+            result['report_context'][
+                'available_account_ids'] = self.account_manager_id.get_available_account_ids_and_names()
+            result['report_context'][
+                'available_account_type_ids'] = self.account_manager_id.get_available_account_type_ids_and_names()
 
-            if result['report_type']['analytic']:
-                result['report_context']['analytic_account_ids'] = [(t.id, t.name) for t in self.analytic_account_ids]
-                result['report_context']['analytic_tag_ids'] = [(t.id, t.name) for t in self.analytic_tag_ids]
-                result['report_context'][
-                    'available_analytic_account_ids'] = self.analytic_manager_id.get_available_analytic_account_ids_and_names()
-                result['report_context'][
-                    'available_analytic_tag_ids'] = self.analytic_manager_id.get_available_analytic_tag_ids_and_names()
+        if result['report_type']['analytic']:
+            result['report_context']['analytic_account_ids'] = [(t.id, t.name) for t in self.analytic_account_ids]
+            result['report_context']['analytic_tag_ids'] = [(t.id, t.name) for t in self.analytic_tag_ids]
+            result['report_context'][
+                'available_analytic_account_ids'] = self.analytic_manager_id.get_available_analytic_account_ids_and_names()
+            result['report_context'][
+                'available_analytic_tag_ids'] = self.analytic_manager_id.get_available_analytic_tag_ids_and_names()
 
-                # TODO:Incluyendo dimesion
-                # result['report_context']['analytic_account_dimension_id'] = [(t.id, t.name) for t in
-                #                                                               self.analytic_account_dimension_id]
-                result['report_context'][
-                    'available_analytic_account_dimension_id'] = self.analytic_manager_id.get_available_analytic_account_dimension_id_and_names()
+            # TODO:Incluyendo dimesion
+            # result['report_context']['analytic_account_dimension_id'] = [(t.id, t.name) for t in
+            #                                                               self.analytic_account_dimension_id]
+            result['report_context'][
+                'available_analytic_account_dimension_id'] = self.analytic_manager_id.get_available_analytic_account_dimension_id_and_names()
 
-            result['xml_export'] = self.env['account.financial.html.report.xml.export'].is_xml_export_available(
-                self.get_report_obj())
-            result['fy'] = {
-                'fiscalyear_last_day': self.env.user.company_id.fiscalyear_last_day,
-                'fiscalyear_last_month': self.env.user.company_id.fiscalyear_last_month,
-            }
-            result['available_companies'] = self.multicompany_manager_id.get_available_company_ids_and_names()
-            return result
-        else:
-            res = super(AccountReportContextCommon, self).get_html_and_data(given_context)
-            return res
+        result['xml_export'] = self.env['account.financial.html.report.xml.export'].is_xml_export_available(
+            self.get_report_obj())
+        result['fy'] = {
+            'fiscalyear_last_day': self.env.user.company_id.fiscalyear_last_day,
+            'fiscalyear_last_month': self.env.user.company_id.fiscalyear_last_month,
+        }
+        result['available_companies'] = self.multicompany_manager_id.get_available_company_ids_and_names()
+        return result
 
     @api.model
     def return_context(self, report_model, given_context, report_id=None):

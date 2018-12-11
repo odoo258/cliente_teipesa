@@ -45,10 +45,6 @@ class AfipwsConnection(models.Model):
         elif afip_ws == "ws_sr_padron_a4":
             from pyafipws.ws_sr_padron import WSSrPadronA4
             ws = WSSrPadronA4()
-            if self.type == 'production':
-                ws.HOMO = False
-                ws.WSDL = "https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4?wsdl"
-
         return ws
 
     @api.model

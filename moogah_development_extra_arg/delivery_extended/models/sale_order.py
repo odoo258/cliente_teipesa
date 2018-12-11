@@ -26,3 +26,10 @@ class SalesOrder(models.Model):
                 'transport_note': order.transport_note,
             })
         return res
+
+    @api.onchange('partner_shipping_id')
+    def onchange_partner_shipping_id(self):
+        res = False
+        if self.partner_shipping_id and self.partner_shipping_id.transport_id:
+            res = self.partner_shipping_id.transport_id
+        self.transport_company_id = res

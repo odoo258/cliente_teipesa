@@ -17,5 +17,4 @@ class JournalSummaryReportWizard(models.TransientModel):
     customer_receipts = fields.Boolean('Customer Receipts', default=True)
     sort_by = fields.Selection([('monthly','Monthly summary'), ('number','Number'), ('date','Journal Entry Date')],
                                'Sort by', default='monthly')
-    show_reg_number = fields.Boolean(string="Show Reg. Number",default=True)
 

@@ -73,6 +73,7 @@ class AccountPaymentGroup(models.Model):
     name = fields.Char(
         compute='_compute_name',
         string='Referencia2',
+        store=True,
     )
     display_name2 = fields.Char(
         string='Referencia Original',

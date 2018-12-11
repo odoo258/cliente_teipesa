@@ -15,17 +15,15 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '10.0.1.0.6',
+    'version': '10.0.1.0.15',
 
     # any module necessary for this one to work correctly
     'depends': [
-        'account',
         'sale',
-        'account_withholding',
+        'account',
         'l10n_ar_account',
-        'account_withholding_automatic',
+        'account_withholding',
         'vitt_nl_setting',
-        'account_payment_group',
     ],
 
     # always loaded

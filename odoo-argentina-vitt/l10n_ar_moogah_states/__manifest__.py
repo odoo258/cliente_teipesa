@@ -1,16 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Provincias Argentinas con Cod. AFIP",
-    'version': '10.0.1.1',
+    "name": "Provincias Argentinas con Cód. AFIP",
+    'version': '10.0.1.0.0',
     'category': 'Localization/Argentina',
     'sequence': 14,
     'author': 'Moogah',
     'license': 'AGPL-3',
-    'summary': """App de actualizacion para cod. AFIP en Provincias""",
-    'description': """
-        App que actualiza el campo para el codigo AFIP en las provincias de Argentina.
-        """,
-    
+    'summary': '',
     'depends': ['base'],
     'data': ['data/res.country.state.csv'],
     'installable': True,

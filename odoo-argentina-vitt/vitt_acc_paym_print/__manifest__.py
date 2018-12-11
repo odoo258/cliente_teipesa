@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Formato de Impresion para Pagos y Recibos",
+    'name': "impresion de pagos y recibos",
 
     'summary': """Localizacion impresion de pagos y recibos""",
 
     'description': """
-        impresion de pagos y recibos ARG
+        impresion de pagos y recibos
     """,
     'author': "Moogah",
     'website': "http://www.Moogah.com",
     'category': 'Uncategorized',
-    'version': '10.0.1.0',
+    'version': '0.1',
     'depends': [
         'account_payment_group',
         'account_check',

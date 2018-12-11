@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 {
     "name": "Account Payment with Multiple methods",
-    "version": "10.0.1.1.0",
+    "version": "10.0.1.1.1",
     "category": "Accounting",
     "website": "www.moogah.com",
     "author": "Moogah,ADHOC SA, Odoo Community Association (OCA)",

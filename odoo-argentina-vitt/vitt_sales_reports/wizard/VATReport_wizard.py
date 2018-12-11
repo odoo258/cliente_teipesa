@@ -247,7 +247,7 @@ class sales_reports(models.TransientModel):
         vatcodesbase = {}
         tmp = 0.0
         for o in invoices:
-            if o.journal_id.use_documents:
+            if o.journal_id.use_documents and o.validated_inv(self):
                 subindex = 0
                 if self.det_level == 'detailed':
                     worksheet.write(index, subindex, o.date_invoice)
@@ -564,6 +564,9 @@ class report_vitt_sales_reports_reportvat(models.Model):
 
 class def_sales_reports_reportvat(models.Model):
     _inherit = "account.invoice"
+
+    def validated_inv(self, wizard):
+        return True
 
     @api.multi
     def camount_untaxed(self,invoice=None):

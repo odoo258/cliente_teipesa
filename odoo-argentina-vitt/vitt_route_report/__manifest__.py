@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Reporte de Ruta",
+    'name': "reporte de Ruta",
 
     'summary': """reporte de Ruta""",
 
@@ -10,7 +10,7 @@
     'author': "Moogah",
     'website': "http://www.Moogah.com",
     'category': 'Uncategorized',
-    'version': '10.0.1.0',
+    'version': '0.1',
     'depends': ['stock','account','delivery_extended'],
     'data': [
         'views/views.xml',
