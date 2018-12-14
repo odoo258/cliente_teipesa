@@ -168,6 +168,12 @@ class ResCompany(models.Model):
         from pyafipws.wsaa import WSAA
         # create AFIP webservice authentication helper instance:
         wsaa = WSAA()
+        parameter_env_type = self._get_environment_type()
+        if hasattr(wsaa, 'HOMO'):
+            if parameter_env_type == 'production':
+                wsaa.HOMO = False
+            else:
+                wsaa.HOMO = True
         # raise python exceptions on any failure
         wsaa.LanzarExcepciones = True
 

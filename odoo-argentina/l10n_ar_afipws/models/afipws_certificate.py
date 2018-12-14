@@ -16,7 +16,7 @@ _logger = logging.getLogger(__name__)
 
 class AfipwsCertificate(models.Model):
     _name = "afipws.certificate"
-    _rec_name = "display_name"
+    #_rec_name = "display_name"
 
     alias_id = fields.Many2one(
         'afipws.certificate_alias',
@@ -45,7 +45,7 @@ class AfipwsCertificate(models.Model):
         ('cancel', 'Cancelled'),
     ],
         'State',
-        select=True,
+        index=True,
         readonly=True,
         default='draft',
         help="* The 'Draft' state is used when a user is creating a new pair "

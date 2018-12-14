@@ -22,6 +22,7 @@ class AfipwsConnection(models.Model):
             ('wsbfe', 'Bono Fiscal -con detalle- RG2557 (WSBFE)'),
             ('wscdc', 'Constatación de Comprobantes (WSCDC)'),
             ('ws_sr_padron_a4', 'Constatación de CUIT (ws_sr_padron_a4)'),
+            ('ws_sr_constancia_inscripcion', 'Constatación de CUIT (ws_sr_padron_a5)'),
         ])
 
     @api.model
@@ -33,18 +34,51 @@ class AfipwsConnection(models.Model):
         if afip_ws == 'wsfe':
             from pyafipws.wsfev1 import WSFEv1
             ws = WSFEv1()
+            if hasattr(ws, 'HOMO'):
+                if self.type == 'production':
+                    ws.HOMO = False
+                else:
+                    ws.HOMO = True
         elif afip_ws == "wsfex":
             from pyafipws.wsfexv1 import WSFEXv1
             ws = WSFEXv1()
+            if hasattr(ws, 'HOMO'):
+                if self.type == 'production':
+                    ws.HOMO = False
+                else:
+                    ws.HOMO = True
         elif afip_ws == "wsmtxca":
             from pyafipws.wsmtx import WSMTXCA
             ws = WSMTXCA()
+            if hasattr(ws, 'HOMO'):
+                if self.type == 'production':
+                    ws.HOMO = False
+                else:
+                    ws.HOMO = True
         elif afip_ws == "wscdc":
             from pyafipws.wscdc import WSCDC
             ws = WSCDC()
+            if hasattr(ws, 'HOMO'):
+                if self.type == 'production':
+                    ws.HOMO = False
+                else:
+                    ws.HOMO = True
         elif afip_ws == "ws_sr_padron_a4":
             from pyafipws.ws_sr_padron import WSSrPadronA4
             ws = WSSrPadronA4()
+            if self.type == 'production':
+                ws.HOMO = False
+                ws.WSDL = "https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4?wsdl"
+            else:
+                ws.HOMO = True
+        elif afip_ws == "ws_sr_constancia_inscripcion":
+            from pyafipws.ws_sr_padron import WSSrPadronA5
+            ws = WSSrPadronA5()
+            if self.type == 'production':
+                ws.HOMO = False
+                ws.WSDL = "https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA5?wsdl"
+            else:
+                ws.HOMO = True
         return ws
 
     @api.model
@@ -98,4 +132,11 @@ class AfipwsConnection(models.Model):
             else:
                 afip_ws_url = (
                     'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA4')
+        elif afip_ws == 'ws_sr_constancia_inscripcion':
+            if environment_type == 'production':
+                afip_ws_url = (
+                    'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA5')
+            else:
+                afip_ws_url = (
+                    'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA5')
         return afip_ws_url
